@@ -50,6 +50,8 @@ Live site link
 
 ### Wireframes
 
+[Link to wireframes](../MS2/docs/wireframes/wireframes.md)
+
 ## Design
 
 ### Typography
