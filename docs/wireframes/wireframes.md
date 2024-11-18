@@ -12,7 +12,7 @@
 
 ![The wireframe for the index.html site on a tablet when the game is finished](../images/Tablet_with_overlay.png)
 
-## Computer view
+## Browser view
 
 ![The wireframe for the index.html site on a computer screen](../images/Web.png)
 

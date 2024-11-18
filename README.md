@@ -54,9 +54,27 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 ## Design
 
+The overall feel of the website and game is supposed to be fun, vibrant and playful. To accomplish this, the typhography, colors and imagery are all picked based on those words.
+
 ### Typography
 
-### Colour scheme
+**h1-elements**
+
+I chose the Google font _Slackey_ since it has a playful look but is still readable. It's used for the logotype and button texts.
+
+**h2-elements, h3-elements**
+
+All subheadings use the Google font _Original surfer_ because it's playful yet readable.
+
+**p-elements**
+
+Text elements on the website use the Google Font _Sour Gummy_. It has a playful tone while maintaining a higher level of readability, which is essential for text blocks.
+
+### Colours
+
+#### Colour scheme
+
+#### Colour contrast checker
 
 ### Imagery
 
@@ -69,6 +87,15 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 ## Future Features
 
 ## Technologies used
+
+| Source                                                                               |       Location       | Type | Notes                                                                                                         |
+| ------------------------------------------------------------------------------------ | :------------------: | :--: | :------------------------------------------------------------------------------------------------------------ |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |      Wireframes      | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [Balsamiq](https://balsamiq.com/)                                                    |      Wireframes      | Tool | Used to create wireframes for the project.                                                                    |
+| [Google fonts](https://fonts.google.com/)                                            |        Fonts         | Tool | Used to pick fonts for the website.                                                                           |
+| [ChatGPT](https://openai.com/)                                                       |     Images, text     | Tool | Used to create images and correct texts.                                                                      |
+| [remove.bg](https://www.remove.bg/upload)                                            | Duck with sunglasses | Tool | Used to remove background on the image with the duck with sunglasses.                                         |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   |  Screen resolution   | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
 
 ### Languages
 
@@ -124,6 +151,7 @@ With JS Hint
 
 ## Credits
 
-| Source                                                                               | Location | Type |                                                     Notes                                                     |
-| ------------------------------------------------------------------------------------ | :------: | :--: | :-----------------------------------------------------------------------------------------------------------: |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    -     | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| Source      |  Location   |    Type     |    Notes    |
+| ----------- | :---------: | :---------: | :---------: |
+| Placeholder | Placeholder | Placeholder | Placeholder |
+| Placeholder | Placeholder | Placeholder | Placeholder |
