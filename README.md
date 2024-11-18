@@ -1,10 +1,10 @@
 # What the duck?! - Milestone project 2 - HTML, CSS & Javascript
 
-Introduction
+What the duck?! is a user-friendly memory card game designed for duck enthusiasts and casual gamers alike. Thanks to the website's full responsiveness, the game can be played on all devices. Clear instructions are provided, making it easy for users to understand how the game works and start playing right away. The game also features high-quality, vibrant and fun images of ducks, adding to the entertainment.
 
-Responsivity example image
+**Responsivity example image**
 
-Live site link
+**Live site link**
 
 ## Contents
 
@@ -44,7 +44,7 @@ Live site link
 - To ensure the game is playable across all devices, I have implemented a mobile-first approach.
 - To ensure a user-friendly and inviting interface I have implemented common design patterns ([Tidwell, Brewer & Valencia, 2020](#credits)) and selected colours and fonts to match the game theme.
 - An informative text provides details about the game.
-- High-quality images help users/players easily find matching pairs.
+- High-quality images help users/players find matching pairs.
 - A restart button that resets the game.
 - A score counter tracks the number of moves made by the user.
 
