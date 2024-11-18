@@ -1,4 +1,4 @@
-# What the duck?!
+# What the duck?! - Milestone project 2 - HTML, CSS & Javascript
 
 Introduction
 
@@ -10,13 +10,43 @@ Live site link
 
 ## UX (User Experience)
 
+### Target audience
+
+- Users who's looking for a game to play.
+
 ### User stories
 
-### Strategy
+**External user's goals**
 
-### Scope
+- Have fun playing a game.
 
-### Structural
+**Site owner's goals**
+
+- Make a game that the owner would enjoy playing themselves.
+
+### User stories
+
+**As a site owner I want to**
+
+- create a game that both the users and I can enjoy.
+- have a user-friendly and inviting interface to increase the number of people who plays the game.
+
+**As a user I want to**
+
+- be able to play the game on all my devices.
+- be able to find information about the game to understand how it works.
+- see high quality images so that I can find matching pairs.
+- have the choice to restart the game if I want to.
+- see my how many moves I have done.
+
+### Key features to meet the user goals
+
+- To ensure the game is playable across all devices, I have implemented a mobile-first approach.
+- To ensure a user-friendly and inviting interface I have implemented common design patterns ([Tidwell, Brewer & Valencia, 2020](#credits)) and selected colours and fonts to match the game theme.
+- An informative text provides details about the game.
+- High-quality images help users/players easily find matching pairs.
+- A restart button that resets the game.
+- A score counter tracks the number of moves made by the user.
 
 ### Wireframes
 
@@ -92,6 +122,6 @@ With JS Hint
 
 ## Credits
 
-| Source      |  Location   |    Type     |    Notes    |
-| ----------- | :---------: | :---------: | :---------: |
-| Placeholder | Placeholder | Placeholder | Placeholder |
+| Source                                                                               | Location | Type |                                                     Notes                                                     |
+| ------------------------------------------------------------------------------------ | :------: | :--: | :-----------------------------------------------------------------------------------------------------------: |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    -     | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
