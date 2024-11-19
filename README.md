@@ -6,7 +6,7 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 **Live site link**
 
-## Contents
+## Table of contents
 
 ## UX (User Experience)
 
@@ -14,11 +14,13 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 - Users who's looking for a game to play.
 
-### External user's goals
+### Goals
+
+#### External user's goals
 
 - Have fun playing a game.
 
-### Site owner's goals
+#### Site owner's goals
 
 - Make a game that the owner would enjoy playing themselves.
 
@@ -56,7 +58,7 @@ The overall feel of the website and game is supposed to be fun, vibrant and play
 
 ### Typography
 
-**h1-elements**
+**h1-elements and buttons**
 
 I chose the Google font _Slackey_ since it has a playful look but is still readable. It's used for the logotype and button texts.
 
@@ -116,8 +118,9 @@ When creating the mock-up, I also decided to generate icons with the help of Cha
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
 | [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       | Colours, mock-up  | Tool | Create colour scheme, contrast checker and mock-up.                                                           |
 | [WebAIM](https://webaim.org/resources/contrastchecker/)                              |      Colours      | Tool | Control of contrast for accesibility.                                                                         |
-| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        | Tool | The IDE that the project is created in.                                                                       |
+| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        | Tool | To edit code.                                                                                                 |
 | [GitHub](https://www.gitpod.io/)                                                     |  Version control  | Tool | Used to create repository, version control and deployment.                                                    |
+| [w3schools](https://www.w3schools.com/)                                              |      Syntax       | Tool | To find solutions and syntax for HTML, CSS and JavaScript.                                                    |
 
 ### Languages
 
