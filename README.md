@@ -102,22 +102,22 @@ When creating the mock-up, I also decided to generate icons with the help of Cha
 
 ### Tablet/Mobile view
 
-### Key features to meet user goals
-
 ## Future Features
 
 ## Technologies used
 
-| Source                                                                               |       Location       | Type | Notes                                                                                                         |
-| ------------------------------------------------------------------------------------ | :------------------: | :--: | :------------------------------------------------------------------------------------------------------------ |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |      Wireframes      | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
-| [Balsamiq](https://balsamiq.com/)                                                    |      Wireframes      | Tool | Used to create wireframes for the project.                                                                    |
-| [Google fonts](https://fonts.google.com/)                                            |        Fonts         | Tool | Used to pick fonts for the website.                                                                           |
-| [ChatGPT](https://openai.com/)                                                       |     Images, text     | Tool | Used to create images/icons and correct texts.                                                                |
-| [remove.bg](https://www.remove.bg/upload)                                            | Duck with sunglasses | Tool | Used to remove background on the icon 1 and 2.                                                                |
-| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   |  Screen resolution   | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
-| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       |   Colours, mock-up   | Tool | Create colour scheme, contrast checker and mock-up.                                                           |
-| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |       Colours        | Tool | Controll of contrast for accesibility.                                                                        |
+| Source                                                                               |     Location      | Type | Notes                                                                                                         |
+| ------------------------------------------------------------------------------------ | :---------------: | :--: | :------------------------------------------------------------------------------------------------------------ |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [Balsamiq](https://balsamiq.com/)                                                    |    Wireframes     | Tool | Used to create wireframes for the project.                                                                    |
+| [Google fonts](https://fonts.google.com/)                                            |       Fonts       | Tool | Used to pick fonts for the website.                                                                           |
+| [ChatGPT](https://openai.com/)                                                       |   Images, text    | Tool | Used to create images/icons and correct texts.                                                                |
+| [remove.bg](https://www.remove.bg/upload)                                            |       Icons       | Tool | Used to remove background on the icon 1 and 2.                                                                |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       | Colours, mock-up  | Tool | Create colour scheme, contrast checker and mock-up.                                                           |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |      Colours      | Tool | Control of contrast for accesibility.                                                                         |
+| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        | Tool | The IDE that the project is created in.                                                                       |
+| [GitHub](https://www.gitpod.io/)                                                     |  Version control  | Tool | Used to create repository, version control and deployment.                                                    |
 
 ### Languages
 
