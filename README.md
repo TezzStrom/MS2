@@ -14,13 +14,11 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 - Users who's looking for a game to play.
 
-### User stories
-
-**External user's goals**
+### External user's goals
 
 - Have fun playing a game.
 
-**Site owner's goals**
+### Site owner's goals
 
 - Make a game that the owner would enjoy playing themselves.
 
@@ -50,7 +48,7 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 ### Wireframes
 
-[Link to wireframes](../MS2/docs/wireframes/wireframes.md)
+[Link to wireframes](./docs/wireframes/wireframes.md)
 
 ## Design
 
@@ -62,7 +60,7 @@ The overall feel of the website and game is supposed to be fun, vibrant and play
 
 I chose the Google font _Slackey_ since it has a playful look but is still readable. It's used for the logotype and button texts.
 
-**h2-elements, h3-elements**
+**Subheadings**
 
 All subheadings use the Google font _Original surfer_ because it's playful yet readable.
 
@@ -74,9 +72,31 @@ Text elements on the website use the Google Font _Sour Gummy_. It has a playful 
 
 #### Colour scheme
 
+![Colour scheme](./docs/colours/Colour_scheme.png)
+
 #### Colour contrast checker
 
+![Contrast checker](./docs/colours/Contrast_checker.png)
+
+#### Mock-up
+
+I created a quick mock-up in Figma to test the color scheme and ensure I achieved the desired result.
+
+![Mock-up of the game](./docs/images/mock_up.png)
+
 ### Imagery
+
+When creating the mock-up, I also decided to generate icons with the help of ChatGPT to give the mock-up another layer of playfulness. I then used removebg.com to remove the backgrounds in the images.
+
+#### The result
+
+![Icon 1 - a cool duck with sunglasses](./docs/images/icon_removed_background.png)
+
+**Icon 1, a cool duck with sunglasses that are on the backside of the cards.**
+
+![Icon 2 - a surprised duck with sunglasses](./docs/images/surprised_duck_removed_background.png.png)
+
+**Icon 2, a surprised duck with sunglasses that are included in the modal when all of the cards are turned.**
 
 ## Website features
 
@@ -93,9 +113,11 @@ Text elements on the website use the Google Font _Sour Gummy_. It has a playful 
 | Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |      Wireframes      | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
 | [Balsamiq](https://balsamiq.com/)                                                    |      Wireframes      | Tool | Used to create wireframes for the project.                                                                    |
 | [Google fonts](https://fonts.google.com/)                                            |        Fonts         | Tool | Used to pick fonts for the website.                                                                           |
-| [ChatGPT](https://openai.com/)                                                       |     Images, text     | Tool | Used to create images and correct texts.                                                                      |
-| [remove.bg](https://www.remove.bg/upload)                                            | Duck with sunglasses | Tool | Used to remove background on the image with the duck with sunglasses.                                         |
+| [ChatGPT](https://openai.com/)                                                       |     Images, text     | Tool | Used to create images/icons and correct texts.                                                                |
+| [remove.bg](https://www.remove.bg/upload)                                            | Duck with sunglasses | Tool | Used to remove background on the icon 1 and 2.                                                                |
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   |  Screen resolution   | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       |   Colours, mock-up   | Tool | Create colour scheme, contrast checker and mock-up.                                                           |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |       Colours        | Tool | Controll of contrast for accesibility.                                                                        |
 
 ### Languages
 
