@@ -58,19 +58,31 @@ The overall feel of the website and game is supposed to be fun, vibrant and play
 
 ### Typography
 
-The fonts for the website are all from Google fonts.
+The fonts for the website are all from Google fonts or ,according to w3schools, safe fallback fonts.
 
 **h1-elements and buttons**
 
 I chose the Google font _Slackey_ since it has a playful look but is still readable. It's used for the logotype and button texts.
 
+_Back-up font:_
+
+As back-up font I chose Georgia and serif.
+
 **Subheadings**
 
 All subheadings use the Google font _Original surfer_ because it's playful yet readable.
 
+_Back-up font:_
+
+As back-up font I chose Verdana and sans-serif.
+
 **p-elements**
 
 Text elements on the website use the Google Font _Sour Gummy_. It has a playful tone while maintaining a higher level of readability, which is essential for text blocks.
+
+_Back-up font:_
+
+As back-up font I chose Arial and sans-serif.
 
 ### Colours
 
@@ -110,22 +122,15 @@ When creating the mock-up, I decided to generate icons with the help of ChatGPT 
 
 ## Technologies used
 
-| Source                                                                               |     Location      |             Type              | Notes                                                                                                         |
-| ------------------------------------------------------------------------------------ | :---------------: | :---------------------------: | :------------------------------------------------------------------------------------------------------------ |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |             Book              | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
-| [Balsamiq](https://balsamiq.com/)                                                    |    Wireframes     |             Tool              | Used to create wireframes for the project.                                                                    |
-| [Google fonts](https://fonts.google.com/)                                            |       Fonts       |             Tool              | Used to pick fonts for the website.                                                                           |
-| [ChatGPT](https://openai.com/)                                                       |   Images, text    |             Tool              | Used to create images/icons and correct texts.                                                                |
-| [remove.bg](https://www.remove.bg/upload)                                            |       Icons       |             Tool              | Used to remove background on the icon 1 and 2.                                                                |
-| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution |             Tool              | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
-| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       | Colours, mock-up  |             Tool              | Create colour scheme, contrast checker and mock-up.                                                           |
-| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |      Colours      |             Tool              | Control of contrast for accesibility.                                                                         |
-| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        |             Tool              | To edit code.                                                                                                 |
-| [GitHub](https://www.gitpod.io/)                                                     |  Version control  |             Tool              | Used to create repository, version control and deployment.                                                    |
-| [w3schools](https://www.w3schools.com/)                                              |      Syntax       |             Tool              | To find solutions and syntax for HTML, CSS and JavaScript.                                                    |
-| [Tinify](https://tinypng.com/)                                                       |      Images       |        Compress images        | This tool was used to compress images for optimization.                                                       |
-| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode)         |      README       | Markdown and markup formatter | This tool was used to format the README file, I didn't get it to work within the html files.                  |
-| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                                |       head        |       Favicon resource        | Get an icon in the head of the index.html file.                                                               |
+| Source                                                                       |    Location     |             Type              | Notes                                                                 |
+| ---------------------------------------------------------------------------- | :-------------: | :---------------------------: | :-------------------------------------------------------------------- |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                      |     Colours     |             Tool              | Control of contrast for accesibility.                                 |
+| [Gitpod](https://www.gitpod.io/)                                             |       IDE       |             Tool              | To edit code.                                                         |
+| [GitHub](https://www.gitpod.io/)                                             | Version control |             Tool              | Used to create repository, version control and deployment.            |
+| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                        |      head       |       Favicon resource        | Get an icon in the head of the index.html file.                       |
+| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode) |     README      | Markdown and markup formatter | This extension in Gitpod was used to format the README and html file. |
+| [Tinify](https://tinypng.com/)                                               |     Images      |        Compress images        | This tool was used to compress images for optimization.               |
+| [remove.bg](https://www.remove.bg/upload)                                    |      Icons      |             Tool              | Used to remove background on the icon 1 and 2.                        |
 
 ### Languages
 
@@ -133,9 +138,25 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 ### Frameworks
 
+| Source      |  Location   |    Type     | Notes       |
+| ----------- | :---------: | :---------: | :---------- |
+| Placeholder | Placeholder | Placeholder | Placeholder |
+
 ### Libraries
 
+| Source                                    | Location |  Type   | Notes                                                      |
+| ----------------------------------------- | :------: | :-----: | :--------------------------------------------------------- |
+| [w3schools](https://www.w3schools.com/)   |  Syntax  | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
+| [Bootstrap](https://getbootstrap.com/)    |  Syntax  | Library | For syntac and to ensure a responsive website.             |
+| [Google fonts](https://fonts.google.com/) |  Fonts   |  Tool   | Used to pick fonts for the website.                        |
+
 ### Programs
+
+| Source                                                         |     Location     | Type | Notes                                               |
+| -------------------------------------------------------------- | :--------------: | :--: | :-------------------------------------------------- |
+| [Balsamiq](https://balsamiq.com/)                              |    Wireframes    | Tool | Used to create wireframes for the project.          |
+| [ChatGPT](https://openai.com/)                                 |   Images, text   | Tool | Used to create images/icons and correct texts.      |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/) | Colours, mock-up | Tool | Create colour scheme, contrast checker and mock-up. |
 
 ## Deployment
 
@@ -183,7 +204,7 @@ With JS Hint
 
 ## Credits
 
-| Source      |  Location   |    Type     |    Notes    |
-| ----------- | :---------: | :---------: | :---------: |
-| Placeholder | Placeholder | Placeholder | Placeholder |
-| Placeholder | Placeholder | Placeholder | Placeholder |
+| Source                                                                               |     Location      |   Type   | Notes                                                                                                         |
+| ------------------------------------------------------------------------------------ | :---------------: | :------: | :------------------------------------------------------------------------------------------------------------ |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |   Book   | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |

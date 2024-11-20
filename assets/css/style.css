@@ -1,1 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&family=Slackey&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&family=Slackey&family=Sour+Gummy:ital@0;1&display=swap");
+
+/* CSS variables */
+:root {
+  /* Fonts */
+  --primary-font: "Original Surfer", "Georgia", serif;
+  --secondary-font: "Slackey", "Verdana", sans-serif;
+  --body-font: "Sour Gummy", "Arial", sans-serif;
+
+  /* Colours */
+  --primary-color: #1c4a49; /*Dark green*/
+  --secondary-color: #ade8d4; /*Light blue*/
+  --thrid-color: #ffde00; /*Yellow*/
+  --fourth-color: #ffffff; /*White*/
+  --fifth-color: #000000; /*Black*/
+}
+
+/* Global styles */
+
+body {
+  background-color: var(--primary-color);
+  color: var(--fourth-color);
+}
+
+h1 {
+  font-family: var(--primary-font);
+}
