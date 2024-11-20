@@ -58,6 +58,8 @@ The overall feel of the website and game is supposed to be fun, vibrant and play
 
 ### Typography
 
+The fonts for the website are all from Google fonts.
+
 **h1-elements and buttons**
 
 I chose the Google font _Slackey_ since it has a playful look but is still readable. It's used for the logotype and button texts.
@@ -88,7 +90,7 @@ I created a quick mock-up in Figma to test the color scheme and ensure I achieve
 
 ### Imagery
 
-When creating the mock-up, I also decided to generate icons with the help of ChatGPT to give the mock-up another layer of playfulness. I then used removebg.com to remove the backgrounds in the images.
+When creating the mock-up, I decided to generate icons with the help of ChatGPT to add an extra layer of playfulness and achieve the playful tone I was aiming for. I also used removebg.com to remove the backgrounds from the images.
 
 #### The result
 
@@ -108,21 +110,26 @@ When creating the mock-up, I also decided to generate icons with the help of Cha
 
 ## Technologies used
 
-| Source                                                                               |     Location      | Type | Notes                                                                                                         |
-| ------------------------------------------------------------------------------------ | :---------------: | :--: | :------------------------------------------------------------------------------------------------------------ |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     | Book | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
-| [Balsamiq](https://balsamiq.com/)                                                    |    Wireframes     | Tool | Used to create wireframes for the project.                                                                    |
-| [Google fonts](https://fonts.google.com/)                                            |       Fonts       | Tool | Used to pick fonts for the website.                                                                           |
-| [ChatGPT](https://openai.com/)                                                       |   Images, text    | Tool | Used to create images/icons and correct texts.                                                                |
-| [remove.bg](https://www.remove.bg/upload)                                            |       Icons       | Tool | Used to remove background on the icon 1 and 2.                                                                |
-| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Tool | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
-| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       | Colours, mock-up  | Tool | Create colour scheme, contrast checker and mock-up.                                                           |
-| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |      Colours      | Tool | Control of contrast for accesibility.                                                                         |
-| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        | Tool | To edit code.                                                                                                 |
-| [GitHub](https://www.gitpod.io/)                                                     |  Version control  | Tool | Used to create repository, version control and deployment.                                                    |
-| [w3schools](https://www.w3schools.com/)                                              |      Syntax       | Tool | To find solutions and syntax for HTML, CSS and JavaScript.                                                    |
+| Source                                                                               |     Location      |             Type              | Notes                                                                                                         |
+| ------------------------------------------------------------------------------------ | :---------------: | :---------------------------: | :------------------------------------------------------------------------------------------------------------ |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |             Book              | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [Balsamiq](https://balsamiq.com/)                                                    |    Wireframes     |             Tool              | Used to create wireframes for the project.                                                                    |
+| [Google fonts](https://fonts.google.com/)                                            |       Fonts       |             Tool              | Used to pick fonts for the website.                                                                           |
+| [ChatGPT](https://openai.com/)                                                       |   Images, text    |             Tool              | Used to create images/icons and correct texts.                                                                |
+| [remove.bg](https://www.remove.bg/upload)                                            |       Icons       |             Tool              | Used to remove background on the icon 1 and 2.                                                                |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution |             Tool              | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/)                       | Colours, mock-up  |             Tool              | Create colour scheme, contrast checker and mock-up.                                                           |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                              |      Colours      |             Tool              | Control of contrast for accesibility.                                                                         |
+| [Gitpod](https://www.gitpod.io/)                                                     |        IDE        |             Tool              | To edit code.                                                                                                 |
+| [GitHub](https://www.gitpod.io/)                                                     |  Version control  |             Tool              | Used to create repository, version control and deployment.                                                    |
+| [w3schools](https://www.w3schools.com/)                                              |      Syntax       |             Tool              | To find solutions and syntax for HTML, CSS and JavaScript.                                                    |
+| [Tinify](https://tinypng.com/)                                                       |      Images       |        Compress images        | This tool was used to compress images for optimization.                                                       |
+| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode)         |      README       | Markdown and markup formatter | This tool was used to format the README file, I didn't get it to work within the html files.                  |
+| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                                |       head        |       Favicon resource        | Get an icon in the head of the index.html file.                                                               |
 
 ### Languages
+
+The project utilizes HTML, CSS, and JavaScript to develop an interactive game environment for the web.
 
 ### Frameworks
 
