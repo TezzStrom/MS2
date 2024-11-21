@@ -67,6 +67,7 @@ img {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
+/* Data-attribute from CSS-tricks. See credits */
 .flip-card[data-flipped="true"] .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -79,20 +80,19 @@ img {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: var(--secondary-color);
-  border: 2px solid var(--fourth-color);
   border-radius: 10px;
+  border: 3px solid var(--fourth-color);
+  background-color: var(--secondary-color);
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
   transform: rotateY(180deg);
+}
+/* End of flip card styling */
+
+#score {
+  color: var(--thrid-color);
 }
 
 button {
