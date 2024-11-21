@@ -160,6 +160,17 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 ## Deployment
 
+When the header was created, I decided to deploy the website to test the deployed version early and continously through the project to avoid surprises at the end of the project.
+
+### Deployment steps
+
+- Open repository in GitHub and go to settings.
+- Navigate _pages_ through the menu bar to the left.
+- Under _Branch_ choose main and then save.
+- Go back to the <> Code tab.
+- Select deployments.
+- Click the provided link.
+
 ## Testing
 
 ### Validation of HTML/CSS
