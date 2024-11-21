@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".flip-card");
 
+  // Flip cards up
   function flipCard(e) {
     e.currentTarget.dataset.flipped = true;
   }
