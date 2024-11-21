@@ -79,16 +79,16 @@
         </div>
     </header>
 
-    <main>
+    <main class="container-fluid">
         <!--Game section-->
-        <section class="container">
+        <section class="container mt-5">
             <!--All cards are from w3schools How TO - Flip Card-->
             <!--Row 1-->
             <div class="row gap-2">
                 <!--Card 1-->
-                <div class="flip-card col">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                <div class="card flip-card col">
+                    <div class="card-body flip-card-inner">
+                        <div class="flip-card-front d-flex justify-content-center align-items-center">
                             <img src="./assets/img/icon_removed_background_compressed.png"
                                 alt="A duck face with sunglasses">
                         </div>
@@ -99,9 +99,9 @@
                 </div>
 
                 <!--Card 2-->
-                <div class="flip-card col">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                <div class="card flip-card col">
+                    <div class="card-body flip-card-inner">
+                        <div class="flip-card-front d-flex justify-content-center align-items-center">
                             <img src="./assets/img/icon_removed_background_compressed.png"
                                 alt="A duck face with sunglasses">
                         </div>
@@ -112,9 +112,9 @@
                 </div>
 
                 <!--Card 3-->
-                <div class="flip-card col">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                <div class="card flip-card col">
+                    <div class="card-body flip-card-inner">
+                        <div class="flip-card-front d-flex justify-content-center align-items-center">
                             <img src="./assets/img/icon_removed_background_compressed.png"
                                 alt="A duck face with sunglasses">
                         </div>
@@ -125,9 +125,9 @@
                 </div>
 
                 <!--Card 4-->
-                <div class="flip-card col">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                <div class="card flip-card col">
+                    <div class="card-body flip-card-inner">
+                        <div class="flip-card-front d-flex justify-content-center align-items-center">
                             <img src="./assets/img/icon_removed_background_compressed.png"
                                 alt="A duck face with sunglasses">
                         </div>
@@ -140,8 +140,9 @@
         </section>
 
         <!--Score and restart section-->
-        <section>
-
+        <section id="score-section" class="container text-center my-5">
+            <h2 class="my-3">Score:</h2>
+            <button id="restart-button">Restart</button>
         </section>
     </main>
 

@@ -106,11 +106,11 @@ When creating the mock-up, I decided to generate icons with the help of ChatGPT 
 
 #### The result
 
-![Icon 1 - a cool duck with sunglasses](./docs/images/icon_removed_background.png)
+![Icon 1 - a cool duck with sunglasses](./assets/img/icon_removed_background_compressed.png)
 
 **Icon 1, a cool duck with sunglasses that are on the backside of the cards.**
 
-![Icon 2 - a surprised duck with sunglasses](./docs/images/surprised_duck_removed_background.png.png)
+![Icon 2 - a surprised duck with sunglasses](./assets/img/surprised_duck_removed_background_compressed.png)
 
 **Icon 2, a surprised duck with sunglasses that are included in the modal when all of the cards are turned.**
 
@@ -186,6 +186,10 @@ With JS Hint
 ### Bugs
 
 #### Bugs fixed
+
+When I added the cards, they were pushed outside the intended container. This was due to Bootstraps standard padding. To solve this, I put padding: 0; to the classes flip-card and flip-card-inner.
+
+![An image of the bug with the Bootstrap cards](./docs/screenshots/bugs/cards_outside_box.png)
 
 #### Known bugs
 
