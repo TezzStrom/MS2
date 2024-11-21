@@ -1,12 +1,12 @@
 /* Google fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&family=Slackey&family=Sour+Gummy:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&family=Slackey&family=Sour+Gummy:ital,wght@0,300;1,300&display=swap");
 
 /* CSS variables */
 :root {
   /* Fonts */
-  --primary-font: "Original Surfer", "Georgia", serif;
-  --secondary-font: "Slackey", "Verdana", sans-serif;
-  --body-font: "Sour Gummy", "Arial", sans-serif;
+  --primary-font: "Slackey", "Georgia", serif;
+  --secondary-font: "Original Surfer", "Verdana", sans-serif;
+  --third-font: "Sour Gummy", "Arial", sans-serif;
 
   /* Colours */
   --primary-color: #1c4a49; /*Dark green*/
@@ -21,14 +21,20 @@
 body {
   background-color: var(--primary-color);
   color: var(--fourth-color);
+  font-family: var(--third-font);
 }
 
 h1 {
   font-family: var(--primary-font);
 }
 
+h2 {
+  font-family: var(--secondary-font);
+}
+
 /* custom css */
 
-.title-font {
-  font-family: var(--primary-font);
+/* class for a maximum 80 characters long for better legibility*/
+.prose {
+  max-width: 80ch;
 }
