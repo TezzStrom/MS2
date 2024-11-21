@@ -219,7 +219,8 @@ When I added the cards, they were pushed outside the intended container. This wa
 
 ## Credits
 
-| Source                                                                               |     Location      |   Type   | Notes                                                                                                         |
-| ------------------------------------------------------------------------------------ | :---------------: | :------: | :------------------------------------------------------------------------------------------------------------ |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |   Book   | Used to choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
-| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Used to follow the standard/common screen resolution to ensure responsiveness to devices.                     |
+| Source                                                                               |     Location      |   Type   | Notes                                                                                                    |
+| ------------------------------------------------------------------------------------ | :---------------: | :------: | :------------------------------------------------------------------------------------------------------- |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |   Book   | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
+| [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  |  data attributes  | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
