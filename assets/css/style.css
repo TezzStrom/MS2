@@ -26,3 +26,9 @@ body {
 h1 {
   font-family: var(--primary-font);
 }
+
+/* custom css */
+
+.title-font {
+  font-family: var(--primary-font);
+}
