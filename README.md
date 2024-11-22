@@ -187,9 +187,19 @@ With JS Hint
 
 #### Bugs fixed
 
+**Pushed cards**
+
 When I added the cards, they were pushed outside the intended container. This was due to Bootstraps standard padding. To solve this, I put padding: 0; to the classes flip-card and flip-card-inner.
 
 ![An image of the bug with the Bootstrap cards](./docs/screenshots/bugs/cards_outside_box.png)
+
+**Cards flipping back**
+
+Clicking a card that has already been identified as a matching pair makes the first card turn.
+
+![The matched pair](./docs/screenshots/bugs/Bug_cardOne_flip_back.png)
+
+![The first card flipping back](./docs/screenshots/bugs/bug_flipped_cardOne.png)
 
 #### Known bugs
 
@@ -224,3 +234,4 @@ When I added the cards, they were pushed outside the intended container. This wa
 | Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |   Book   | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
 | [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  |  data attributes  | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
+| [Pexels](https://www.pexels.com/search/duck/)                                        |    Duck images    | Resource | Where I got the free to use duck images.                                                                 |
