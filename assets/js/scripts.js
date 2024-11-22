@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let cardTwo = null;
   let matchedPairs = [];
   let lockBoard = false;
+  let scoreCount = 0;
 
   // Player's turn
   function clickedCard(e) {
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         lockBoard = false;
       }, 1500);
     }
+    countMoves();
   }
 
   function resetCards() {
@@ -76,6 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
     cardOne = null;
     cardTwo = null;
     console.log("Reset turn");
+  }
+
+  function countMoves() {
+    scoreCount++;
+    const counterMoves = document.getElementById("counter-moves");
+    console.log("plus score", counterMoves);
+    counterMoves.textContent = scoreCount;
   }
 
   // Walks through cards for eventlistener
