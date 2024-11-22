@@ -206,9 +206,15 @@ _Clicked first card and a card that doesn't match makes the first clicked card t
 
 ![The first card flipping back](./docs/screenshots/bugs/bug_flipped_cardOne.png)
 
-I stored the matching pairs in an array and in the if statement in the image below, control if the card is already matched which exits the function if true.
+I stored the matching pairs in an array and in the if statement, in the image below, control if the card is already matched which exits the function if true.
 
-![Solution syntax](./docs/screenshots/bugs/bug_cardOne_syntax_solution.png)
+![The function that exits the function if they are already matched](./docs/screenshots/bugs/bug_cardOne_syntax_solution.png)
+
+![The checks if the card is matched](./docs/screenshots/bugs/bug_cardOne_syntax_solution_function.png)
+
+**Freeze board while cards turn back**
+
+When the user picks two cards they could click more images to turn and that would break the game. To solve this I found a solution on [Stackoverflow(1)](#credits) which utilizes the lockboard variable and setting it to true or false.
 
 #### Known bugs
 
@@ -244,3 +250,4 @@ I stored the matching pairs in an array and in the if statement in the image bel
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
 | [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  |  data attributes  | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
 | [Pexels](https://www.pexels.com/search/duck/)                                        |    Duck images    | Resource | Where I got the free to use duck images.                                                                 |
+| [Stackoverflow(1)](https://shorturl.at/TOVcr)                                        |    Syntax/bug     | Resource | To freeze the player's board before two pictures are flipped back.                                       |
