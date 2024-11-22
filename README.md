@@ -47,6 +47,7 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 - High-quality images help users/players find matching pairs.
 - A restart button that resets the game.
 - A score counter tracks the number of moves made by the user.
+- There is a button which opens a modal with instructions on how to play the game.
 
 ### Wireframes
 
