@@ -197,9 +197,17 @@ When I added the cards, they were pushed outside the intended container. This wa
 
 Clicking a card that has already been identified as a matching pair makes the first card turn.
 
+_Chosen cards facing up (number 1 cards)_
+
 ![The matched pair](./docs/screenshots/bugs/Bug_cardOne_flip_back.png)
 
+_Clicked first card and a card that doesn't match makes the first clicked card to flip back_
+
 ![The first card flipping back](./docs/screenshots/bugs/bug_flipped_cardOne.png)
+
+I stored the matching pairs in an array and in the if statement in the image below, control if the card is already matched which exits the function if true.
+
+![Solution syntax](./docs/screenshots/bugs/bug_cardOne_syntax_solution.png)
 
 #### Known bugs
 
