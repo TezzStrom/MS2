@@ -40,41 +40,60 @@
                 Duck?! is the perfect
                 mix of relaxation and brain-boosting fun.
             </p>
-            <div class="my-2">
-                <h2>How to play:</h2>
-                <p class="prose">
-                    Your goal is to test your memory by matching pairs of cards. At the start of the game, all cards are
-                    laid face down.
-                </p>
-                <ol class="prose">
-                    <li>
-                        <strong>Flip Two Cards:</strong>
-                        On each turn, select and flip over two cards to reveal the duck
-                        images.
-                    </li>
-                    <li>
-                        <strong>Match the Ducks:</strong>
-                        If the two cards have matching images, they stay face-up. If they don't match,
-                        they
-                        are flipped back face down.
-                    </li>
-                    <li>
-                        <strong>Remember the Ducks:</strong>
-                        Use your memory to remember the locations of previously
-                        revealed duck images
-                        to
-                        find matches more efficiently.
-                    </li>
-                    <li>
-                        <strong>Win the Game:</strong>
-                        The game ends when all pairs have been matched. Aim to complete
-                        it in the fewest
-                        number of moves!
-                    </li>
-                </ol>
-                <p>
-                    Enjoy the challenge and the charming ducks as you play!
-                </p>
+            <div class="my-2 text-center">
+                <button data-bs-toggle="modal" data-bs-target="#how-to-play" class="button-main">How to play</button>
+                <!--Modal for how to play-->
+                <div class="modal fade" id="how-to-play" tabindex="-1" aria-labelledby="how-to-play-modal-label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 id="how-to-play-modal-label" class="modal-title">Instuctions</h1>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="prose">
+                                    Your goal is to test your memory by matching pairs of cards. At the start of the
+                                    game, all cards are
+                                    laid face down.
+                                </p>
+                                <ol class="prose">
+                                    <li>
+                                        <strong>Flip Two Cards:</strong>
+                                        On each turn, select and flip over two cards to reveal the duck
+                                        images.
+                                    </li>
+                                    <li>
+                                        <strong>Match the Ducks:</strong>
+                                        If the two cards have matching images, they stay face-up. If they don't match,
+                                        they
+                                        are flipped back face down.
+                                    </li>
+                                    <li>
+                                        <strong>Remember the Ducks:</strong>
+                                        Use your memory to remember the locations of previously
+                                        revealed duck images
+                                        to
+                                        find matches more efficiently.
+                                    </li>
+                                    <li>
+                                        <strong>Win the Game:</strong>
+                                        The game ends when all pairs have been matched. Aim to complete
+                                        it in the fewest
+                                        number of moves!
+                                    </li>
+                                </ol>
+                                <p>
+                                    Enjoy the challenge and the charming ducks as you play!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn button-main" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -250,7 +269,7 @@
         <!--Score and restart section-->
         <section id="score-section" class="container text-center my-5">
             <h2 id="score" class="my-3">Score:</h2>
-            <button id="restart-button">Restart</button>
+            <button class="button-main">Restart</button>
         </section>
     </main>
 

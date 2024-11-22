@@ -95,9 +95,13 @@ img {
   color: var(--thrid-color);
 }
 
-button {
+.button-main {
   padding: 15px 30px;
   border-radius: 10px;
   font-family: var(--primary-font);
   background-color: var(--fourth-color);
+}
+
+.modal-content {
+  background-color: var(--primary-color);
 }
