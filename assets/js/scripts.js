@@ -4,14 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
   let cardOne = null;
   let cardTwo = null;
   let matchedPairs = [];
+  let lockBoard = false;
 
   // Player's turn
   function clickedCard(e) {
+    if (lockBoard) return;
     const card = e.currentTarget;
     console.log("Clicked card", card);
 
     const identifier = card.dataset.identifier;
-    matchedCard(identifier);
+    // Exit function if clicked card is part of an already matching pair
+    if (matchedCard(identifier) === true) {
+      return;
+    }
 
     flipCard(card);
     logCards(card, identifier);
@@ -22,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.dataset.flipped = true;
   }
 
-  //Exit function if clicked card is part of an already matching pair
+  // Checks if clicked card is part of an already matching pair
   function matchedCard(identifier) {
     return matchedPairs.includes(identifier);
   }
@@ -41,23 +46,29 @@ document.addEventListener("DOMContentLoaded", function () {
       cardTwo = card;
       console.log("cardTwo", cardTwo);
 
-      matchCards(identifier);
+      matchCards(identifier, cardOne, cardTwo);
     }
   }
 
-  function matchCards(identifier) {
+  function matchCards(identifier, cardOne, cardTwo) {
     // Cards match?
     if (cardOne.dataset.identifier === cardTwo.dataset.identifier) {
       // Yes, keep cards face up
       matchedPairs.push(identifier);
       console.log("match", identifier);
+      resetCards();
     } else {
-      // No, flip cards back down
-      cardOne.dataset.flipped = false;
-      cardTwo.dataset.flipped = false;
-      console.log("Flipping back");
+      //Delay before turning back cards
+      lockBoard = true;
+      setTimeout(() => {
+        // No, flip cards back down
+        cardOne.dataset.flipped = false;
+        cardTwo.dataset.flipped = false;
+        console.log("Flipping back");
+        resetCards();
+        lockBoard = false;
+      }, 1500);
     }
-    resetCards();
   }
 
   function resetCards() {
