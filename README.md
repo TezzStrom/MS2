@@ -188,13 +188,13 @@ With JS Hint
 
 #### Bugs fixed
 
-**Pushed cards**
+**Bug 1: Pushed cards**
 
 When I added the cards, they were pushed outside the intended container. This was due to Bootstraps standard padding. To solve this, I put padding: 0; to the classes flip-card and flip-card-inner.
 
 ![An image of the bug with the Bootstrap cards](./docs/screenshots/bugs/cards_outside_box.png)
 
-**Cards flipping back**
+**Bug 2: Cards flipping back**
 
 Clicking a card that has already been identified as a matching pair makes the first card turn.
 
@@ -212,11 +212,15 @@ I stored the matching pairs in an array and in the if statement, in the image be
 
 ![The checks if the card is matched](./docs/screenshots/bugs/bug_cardOne_syntax_solution_function.png)
 
-**Freeze board while cards turn back**
+**Bug 4: Freeze board while cards turn back**
 
 When the user picks two cards they could click more images to turn and that would break the game. To solve this I found a solution on [Stackoverflow(1)](#credits) which utilizes the lockboard variable and setting it to true or false.
 
-#### Known bugs
+**Bug 5: Bootstrap modal not showing**
+
+When the user has matched all pairs, I wanted a modal to appear congratulating them for the win. I didn't get it to work but later found the solution in Bootstrap docs. The code solution can be seen in the image below:
+
+![The code to show the Bootstrap modal](./docs/screenshots/bugs/bug_modal_not_showing.png)
 
 ### Browser testing
 
