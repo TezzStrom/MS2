@@ -30,18 +30,24 @@
 <body>
     <header class="container-fluid">
         <div class="container mt-5">
-            <h1>What the duck?!</h1>
-            <p class="prose">
-                Get ready to flex your memory and have a quacking good time with What the
-                Duck?!, a charming
-                card-matching game that's all about adorable ducks. Perfect for all ages, this game features
-                vibrant, high-quality images of ducks that will brighten your day while you test your recall skills.
-                With its simple rules, cheerful visuals, and endless replay value, What the
-                Duck?! is the perfect
-                mix of relaxation and brain-boosting fun.
-            </p>
-            <div class="my-2 text-center">
-                <button data-bs-toggle="modal" data-bs-target="#how-to-play" class="button-main">How to play</button>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h1>What the duck?!</h1>
+                    <p class="prose">
+                        Get ready to flex your memory and have a quacking good time with What the
+                        Duck?!, a charming
+                        card-matching game that's all about adorable ducks. Perfect for all ages, this game features
+                        vibrant, high-quality images of ducks that will brighten your day while you test your recall
+                        skills.
+                        With its simple rules, cheerful visuals, and endless replay value, What the
+                        Duck?! is the perfect
+                        mix of relaxation and brain-boosting fun.
+                    </p>
+                </div>
+                <div class="my-2 col-12 col-lg-4 d-flex align-items-center justify-content-center">
+                    <button data-bs-toggle="modal" data-bs-target="#how-to-play" class="button-main">How to
+                        play</button>
+                </div>
                 <!--Modal for how to play-->
                 <div class="modal fade" id="how-to-play" tabindex="-1" aria-labelledby="how-to-play-modal-label"
                     aria-hidden="true">
@@ -49,7 +55,7 @@
                         <!--Padding on the modal to give it a bit more breathing space and get a less cramped feeling-->
                         <div class="modal-content p-3">
                             <div class="modal-header">
-                                <h1 id="how-to-play-modal-label" class="modal-title">Instuctions</h1>
+                                <h1 id="how-to-play-modal-label" class="modal-title">Instructions</h1>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -102,165 +108,193 @@
     <main class="container-fluid">
         <!--Game section-->
         <section class="container mt-5">
-            <!--All cards are from w3schools How TO - Flip Card-->
-            <!--Row 1-->
-            <div class="row gap-2 mb-2">
-                <!--Card 1-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="1">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
+            <div class="row justify-content-center">
+                <!--All cards are from w3schools How TO - Flip Card-->
+                <!--Row 1-->
+                <div class="row gap-2 mb-2">
+                    <!--Card 1-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="1">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                1
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            1
+                    </div>
+                    <!--Card 2-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="1">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 3-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="2">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="2">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                2
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!--Card 2-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="1">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
+                <!--Row 2-->
+                <div class="row gap-2 mb-2">
+                    <!--Card 5-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="3">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                3
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            1
+                    </div>
+                    <!--Card 6-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="3">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 7-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="4">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 8-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="4">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                4
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!--Card 3-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="2">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            2
+                <!--Row 3-->
+                <div class="row gap-2">
+                    <!--Card 9-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="5">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                5
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!--Card 4-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="2">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
+                    <!--Card 10-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="5">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                5
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            2
+                    </div>
+                    <!--Card 11-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="6">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                6
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 12-->
+                    <div class="card flip-card col" data-flipped="false" data-identifier="6">
+                        <div class="card-body flip-card-inner">
+                            <div class="flip-card-front d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/icon_removed_background_compressed.png"
+                                    alt="A duck face with sunglasses">
+                            </div>
+                            <div class="flip-card-back">
+                                6
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--Row 2-->
-            <div class="row gap-2 mb-2">
-                <!--Card 5-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="3">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            3
-                        </div>
-                    </div>
-                </div>
 
-                <!--Card 6-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="3">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
+            <!--Modal for won game-->
+            <div class="modal fade" id="player-win" tabindex="-1" aria-labelledby="player-win-modal-label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <!--Padding on the modal to give it a bit more breathing space and get a less cramped feeling-->
+                    <div class="modal-content p-3">
+                        <div class="modal-header">
+                            <h1 id="player-win-modal-label" class="modal-title"> Congratulations!</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="flip-card-back">
-                            3
-                        </div>
-                    </div>
-                </div>
+                        <div class="modal-body text-center">
+                            <p class="prose">
+                                You've just conquered What the Duck?! 🦆🎉
+                            </p>
+                            <img src="./assets/img/surprised_duck_removed_background_compressed.png"
+                                alt="A cartoon duck with sunglasses and a surprised expression">
+                            <p>
+                                Your sharp mind and incredible focus have
+                                proven you're not just quick—you're unstoppable! Whether it was the quirky ducks or the
+                                sneaky cards, you aced it like a true champ.
+                            </p>
 
-                <!--Card 7-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="4">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            4
-                        </div>
-                    </div>
-                </div>
+                            <p>Now go celebrate your victory and remember... no duck can outsmart you! 🏆🐤</p>
 
-                <!--Card 8-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="4">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
+                            <p>You completed the game in <span id="moves-count"></span> moves! Quack-tastic job! 👏</p>
                         </div>
-                        <div class="flip-card-back">
-                            4
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Row 3-->
-            <div class="row gap-2">
-                <!--Card 9-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="5">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            5
-                        </div>
-                    </div>
-                </div>
-
-                <!--Card 10-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="5">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            5
-                        </div>
-                    </div>
-                </div>
-
-                <!--Card 11-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="6">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            6
-                        </div>
-                    </div>
-                </div>
-
-                <!--Card 12-->
-                <div class="card flip-card col" data-flipped="false" data-identifier="6">
-                    <div class="card-body flip-card-inner">
-                        <div class="flip-card-front d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/icon_removed_background_compressed.png"
-                                alt="A duck face with sunglasses">
-                        </div>
-                        <div class="flip-card-back">
-                            6
+                        <div class="modal-footer">
+                            <button id="play-again" type="button" class="btn button-main" data-bs-dismiss="modal">Play
+                                again!</button>
                         </div>
                     </div>
                 </div>
@@ -269,8 +303,12 @@
 
         <!--Score and restart section-->
         <section id="score-section" class="container text-center my-5">
-            <h2 id="score" class="my-3">Score: <span id="counter-moves">0</span></h2>
-            <button class="button-main">Restart</button>
+            <div class="row">
+                <div>
+                    <h2 id="score" class="my-3">Score: <span id="counter-moves">0</span></h2>
+                    <button class="button-main">Restart</button>
+                </div>
+            </div>
         </section>
     </main>
 

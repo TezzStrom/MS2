@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let matchedPairs = [];
   let lockBoard = false;
   let scoreCount = 0;
+  const modalWin = document.getElementById("player-win");
 
   // Player's turn
   function clickedCard(e) {
+    //Lockboard from Stackoverflow(1), see credits
     if (lockBoard) return;
     const card = e.currentTarget;
     console.log("Clicked card", card);
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       resetCards();
     } else {
       //Delay before turning back cards
+      //Lockboard from Stackoverflow(1), see credits
       lockBoard = true;
       setTimeout(() => {
         // No, flip cards back down
@@ -67,10 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
         cardTwo.dataset.flipped = false;
         console.log("Flipping back");
         resetCards();
+        //Lockboard from Stackoverflow(1), see credits
         lockBoard = false;
       }, 1500);
     }
     countMoves();
+    checkMatchedPairsLength(scoreCount);
   }
 
   function resetCards() {
@@ -86,6 +91,31 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("plus score", counterMoves);
     counterMoves.textContent = scoreCount;
   }
+
+  function checkMatchedPairsLength(scoreCount) {
+    if (matchedPairs.length === 6) {
+      const modalShow = document.getElementById("player-win");
+      const movesCountElement = document.getElementById("moves-count");
+
+      // Update modal content with scorecount
+      movesCountElement.textContent = scoreCount;
+
+      //Show modal (Bug 5 with Bootstrap documentation)
+      setTimeout(() => {
+        const bootstrapModal = new bootstrap.Modal(modalShow);
+        bootstrapModal.show();
+      }, 1500);
+
+      // Eventlisteners for play again button in modal
+      const playAgainButton = document.getElementById("play-again");
+
+      playAgainButton.addEventListener("click", function () {
+        resetGame();
+      });
+    }
+  }
+
+  function resetGame() {}
 
   // Walks through cards for eventlistener
   for (let index = 0; index < cards.length; index++) {
