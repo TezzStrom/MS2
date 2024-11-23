@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     flipCard(card);
     logCards(card, identifier);
+    changeRestartButtonState();
   }
 
   // Select a card
@@ -118,6 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  const resetButton = document.getElementById("restart-button");
+  resetButton.addEventListener("click", () => {
+    resetGame();
+  });
+
   function resetGame() {
     // Reset game variables
     matchedPairs = [];
@@ -131,12 +137,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset cards
     const cards = document.querySelectorAll(".flip-card");
     cards.forEach((card) => (card.dataset.flipped = false));
+
+    // Credit Stackoverflow(2), how to add disabled to the reset button.
+    resetButton.disabled = true;
+    resetButton.style.pointerEvents = "none";
   }
 
-  const resetButton = document.getElementById("restart-button");
-  resetButton.addEventListener("click", () => {
-    resetGame();
-  });
+  function changeRestartButtonState() {
+    if (matchedPairs.length > 0) {
+      resetButton.removeAttribute("disabled");
+      resetButton.style.pointerEvents = "auto";
+    }
+  }
 
   // Walks through cards for eventlistener
   for (let index = 0; index < cards.length; index++) {

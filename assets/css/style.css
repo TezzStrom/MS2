@@ -99,6 +99,8 @@ img {
   color: var(--third-color);
 }
 
+/* Buttons */
+
 .button-main {
   padding: 15px 30px;
   border-radius: 10px;
@@ -111,6 +113,11 @@ img {
   background-color: var(--third-color);
 }
 
+#restart-button {
+  pointer-events: none;
+}
+
+/* Modals */
 .modal-content {
   background-color: var(--primary-color);
 }
