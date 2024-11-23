@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let matchedPairs = [];
   let lockBoard = false;
   let scoreCount = 0;
-  const modalWin = document.getElementById("player-win");
 
   // Player's turn
   function clickedCard(e) {
@@ -87,9 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function countMoves() {
     scoreCount++;
+    updateScore(scoreCount);
+  }
+
+  function updateScore(score) {
     const counterMoves = document.getElementById("counter-moves");
     console.log("plus score", counterMoves);
-    counterMoves.textContent = scoreCount;
+    counterMoves.textContent = score;
   }
 
   function checkMatchedPairsLength(scoreCount) {
@@ -115,7 +118,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function resetGame() {}
+  function resetGame() {
+    // Reset game variables
+    matchedPairs = [];
+    cardOne = null;
+    cardTwo = null;
+
+    // Reset scoreCount
+    scoreCount = 0;
+    updateScore(scoreCount);
+
+    // Reset cards
+    const cards = document.querySelectorAll(".flip-card");
+    cards.forEach((card) => (card.dataset.flipped = false));
+  }
+
+  const resetButton = document.getElementById("restart-button");
+  resetButton.addEventListener("click", () => {
+    resetGame();
+  });
 
   // Walks through cards for eventlistener
   for (let index = 0; index < cards.length; index++) {
