@@ -11,7 +11,7 @@
   /* Colours */
   --primary-color: #1c4a49; /*Dark green*/
   --secondary-color: #ade8d4; /*Light blue*/
-  --thrid-color: #ffde00; /*Yellow*/
+  --third-color: #ffde00; /*Yellow*/
   --fourth-color: #ffffff; /*White*/
   --fifth-color: #000000; /*Black*/
 }
@@ -30,6 +30,10 @@ h1 {
 
 h2 {
   font-family: var(--secondary-font);
+}
+
+#moves-count {
+  font-weight: bolder;
 }
 
 /* custom css */
@@ -92,14 +96,19 @@ img {
 /* End of flip card styling */
 
 #score {
-  color: var(--thrid-color);
+  color: var(--third-color);
 }
 
 .button-main {
   padding: 15px 30px;
   border-radius: 10px;
   font-family: var(--primary-font);
+  color: var(--fifth-color);
   background-color: var(--fourth-color);
+}
+
+.button-main:hover {
+  background-color: var(--third-color);
 }
 
 .modal-content {

@@ -145,11 +145,12 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 ### Libraries
 
-| Source                                    | Location |  Type   | Notes                                                      |
-| ----------------------------------------- | :------: | :-----: | :--------------------------------------------------------- |
-| [w3schools](https://www.w3schools.com/)   |  Syntax  | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
-| [Bootstrap](https://getbootstrap.com/)    |  Syntax  | Library | For syntac and to ensure a responsive website.             |
-| [Google fonts](https://fonts.google.com/) |  Fonts   |  Tool   | Used to pick fonts for the website.                        |
+| Source                                      | Location |  Type   | Notes                                                      |
+| ------------------------------------------- | :------: | :-----: | :--------------------------------------------------------- |
+| [w3schools](https://www.w3schools.com/)     |  Syntax  | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
+| [Bootstrap](https://getbootstrap.com/)      |  Syntax  | Library | For syntac and to ensure a responsive website.             |
+| [Google fonts](https://fonts.google.com/)   |  Fonts   |  Tool   | Used to pick fonts for the website.                        |
+| [Mdn](https://developer.mozilla.org/en-US/) |  Syntax  |  Tool   | Find and use JavaScript syntax.                            |
 
 ### Programs
 

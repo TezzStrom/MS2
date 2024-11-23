@@ -45,13 +45,14 @@
                     </p>
                 </div>
                 <div class="my-2 col-12 col-lg-4 d-flex align-items-center justify-content-center">
-                    <button data-bs-toggle="modal" data-bs-target="#how-to-play" class="button-main">How to
-                        play</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#how-to-play" class="button-main">
+                        How to play
+                    </button>
                 </div>
                 <!--Modal for how to play-->
                 <div class="modal fade" id="how-to-play" tabindex="-1" aria-labelledby="how-to-play-modal-label"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <!--Padding on the modal to give it a bit more breathing space and get a less cramped feeling-->
                         <div class="modal-content p-3">
                             <div class="modal-header">
@@ -96,7 +97,7 @@
                                 </p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn button-main" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="button-main" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -268,20 +269,21 @@
             <!--Modal for won game-->
             <div class="modal fade" id="player-win" tabindex="-1" aria-labelledby="player-win-modal-label"
                 aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-lg">
                     <!--Padding on the modal to give it a bit more breathing space and get a less cramped feeling-->
                     <div class="modal-content p-3">
                         <div class="modal-header">
-                            <h1 id="player-win-modal-label" class="modal-title"> Congratulations!</h1>
+                            <h1 id="player-win-modal-label" class="modal-title"> What the duck?!</h1>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-center">
+                            <img src="./assets/img/surprised_duck_removed_background_compressed.png"
+                                alt="A cartoon duck with sunglasses and a surprised expression">
                             <p class="prose">
                                 You've just conquered What the Duck?! 🦆🎉
                             </p>
-                            <img src="./assets/img/surprised_duck_removed_background_compressed.png"
-                                alt="A cartoon duck with sunglasses and a surprised expression">
+                            <p>You completed the game in <span id="moves-count"></span> moves! </p>
                             <p>
                                 Your sharp mind and incredible focus have
                                 proven you're not just quick—you're unstoppable! Whether it was the quirky ducks or the
@@ -290,10 +292,10 @@
 
                             <p>Now go celebrate your victory and remember... no duck can outsmart you! 🏆🐤</p>
 
-                            <p>You completed the game in <span id="moves-count"></span> moves! Quack-tastic job! 👏</p>
+                            <p>Quack-tastic job! 👏</p>
                         </div>
                         <div class="modal-footer">
-                            <button id="play-again" type="button" class="btn button-main" data-bs-dismiss="modal">Play
+                            <button id="play-again" type="button" class="button-main" data-bs-dismiss="modal">Play
                                 again!</button>
                         </div>
                     </div>
@@ -306,7 +308,7 @@
             <div class="row">
                 <div>
                     <h2 id="score" class="my-3">Score: <span id="counter-moves">0</span></h2>
-                    <button class="button-main">Restart</button>
+                    <button type="button" class="button-main">Restart</button>
                 </div>
             </div>
         </section>

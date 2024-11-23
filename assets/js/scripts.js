@@ -100,11 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update modal content with scorecount
       movesCountElement.textContent = scoreCount;
 
-      //Show modal (Bug 5 with Bootstrap documentation)
+      //Show modal (Bug 5: solved with Bootstrap documentation)
       setTimeout(() => {
         const bootstrapModal = new bootstrap.Modal(modalShow);
         bootstrapModal.show();
-      }, 1500);
+      }, 900);
 
       // Eventlisteners for play again button in modal
       const playAgainButton = document.getElementById("play-again");
