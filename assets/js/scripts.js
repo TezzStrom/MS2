@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".flip-card");
 
+  // Global variables
   let cardOne = null;
   let cardTwo = null;
   let matchedPairs = [];
@@ -85,11 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Reset turn");
   }
 
+  // Adds to the scorecount when two cards are matched
   function countMoves() {
     scoreCount++;
     updateScore(scoreCount);
   }
 
+  // Updates the score text in HTML document
   function updateScore(score) {
     const counterMoves = document.getElementById("counter-moves");
     console.log("plus score", counterMoves);
@@ -113,12 +116,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Eventlisteners for play again button in modal
       const playAgainButton = document.getElementById("play-again");
 
+      // Eventlistener for the play again button in the win modal, calls the function that resets the game
       playAgainButton.addEventListener("click", function () {
         resetGame();
       });
     }
   }
 
+  // Eventlistener for when the reset button is pressed, calls the function to reset the game
   const resetButton = document.getElementById("restart-button");
   resetButton.addEventListener("click", () => {
     resetGame();
@@ -138,12 +143,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".flip-card");
     cards.forEach((card) => (card.dataset.flipped = false));
 
+    // Adds the disabled state to the reset button
     // Credit Stackoverflow(2), how to add disabled to the reset button.
     resetButton.disabled = true;
     resetButton.style.pointerEvents = "none";
   }
 
   function changeRestartButtonState() {
+    //Removes the buttons disabled state when first score is counted
     if (matchedPairs.length > 0) {
       resetButton.removeAttribute("disabled");
       resetButton.style.pointerEvents = "auto";

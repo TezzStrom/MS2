@@ -4,7 +4,7 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 **Responsivity example image**
 
-**Live site link**
+[Link to live site](https://tezzstrom.github.io/MS2-What-the-duck/)
 
 ## Table of contents
 
@@ -41,7 +41,7 @@ What the duck?! is a user-friendly memory card game designed for duck enthusiast
 
 ### Key features to meet the user goals
 
-- To ensure the game is playable across all devices, I have implemented a mobile-first approach.
+- To ensure the game is playable across all devices, I have implemented a mobile-first approach and designed the UI for different screen sizes.
 - To ensure a user-friendly and inviting interface I have implemented common design patterns ([Tidwell, Brewer & Valencia, 2020](#credits)) and selected colours and fonts to match the game theme.
 - An informative text provides details about the game.
 - High-quality images help users/players find matching pairs.
@@ -154,11 +154,11 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 ### Programs
 
-| Source                                                         |     Location     | Type | Notes                                               |
-| -------------------------------------------------------------- | :--------------: | :--: | :-------------------------------------------------- |
-| [Balsamiq](https://balsamiq.com/)                              |    Wireframes    | Tool | Used to create wireframes for the project.          |
-| [ChatGPT](https://openai.com/)                                 |   Images, text   | Tool | Used to create images/icons and correct texts.      |
-| [Figma](https://testsigma.com/blog/common-screen-resolutions/) | Colours, mock-up | Tool | Create colour scheme, contrast checker and mock-up. |
+| Source                                                         |     Location     | Type | Notes                                                                                                |
+| -------------------------------------------------------------- | :--------------: | :--: | :--------------------------------------------------------------------------------------------------- |
+| [Balsamiq](https://balsamiq.com/)                              |    Wireframes    | Tool | Used to create wireframes for the project.                                                           |
+| [ChatGPT](https://openai.com/)                                 |   Images, text   | Tool | Used to create images/icons and correct texts. Also a tool to make the texts more funny and vibrant. |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/) | Colours, mock-up | Tool | Create colour scheme, contrast checker and mock-up.                                                  |
 
 ## Deployment
 
@@ -241,11 +241,18 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ### Manual testing: User stories
 
-| Expectation (As a user, I want to...) | Result (As a user, I...) |
-| :-----------------------------------: | :----------------------: |
-|              Placeholder              |       Placeholder        |
-|              Placeholder              |       Placeholder        |
-|              Placeholder              |       Placeholder        |
+| Expectation (As a site owner, I want to...)                                                      | Result (As a site owner, I...)                            |
+| :----------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| create a game that both the users and I can enjoy.                                               | have created a memory card game that the users can enjoy. |
+| have a user-friendly and inviting interface to increase the number of people who plays the game. | have created a user-friendly and inviting interface.      |
+
+| Expectation (As a user, I want to...)                                  | Result (As a user, I...)                                                 |
+| :--------------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| be able to play the game on all my devices.                            | can play the game on all of my devices thanks to the responsiveness.     |
+| be able to find information about the game to understand how it works. | can find information about the game if I press the button "How to play". |
+| see high quality images so that I can find matching pairs.             | Placeholder                                                              |
+| have the choice to restart the game if I want to.                      | can restart the game via the "Restart"-button.                           |
+| see my how many moves I have done.                                     | can see how many moves I have done via the score counter.                |
 
 ## Credits
 
