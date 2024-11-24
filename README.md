@@ -123,15 +123,17 @@ When creating the mock-up, I decided to generate icons with the help of ChatGPT 
 
 ## Technologies used
 
-| Source                                                                       |    Location     |             Type              | Notes                                                                 |
-| ---------------------------------------------------------------------------- | :-------------: | :---------------------------: | :-------------------------------------------------------------------- |
-| [WebAIM](https://webaim.org/resources/contrastchecker/)                      |     Colours     |             Tool              | Control of contrast for accesibility.                                 |
-| [Gitpod](https://www.gitpod.io/)                                             |       IDE       |             Tool              | To edit code.                                                         |
-| [GitHub](https://www.gitpod.io/)                                             | Version control |             Tool              | Used to create repository, version control and deployment.            |
-| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                        |      head       |       Favicon resource        | Get an icon in the head of the index.html file.                       |
-| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode) |     README      | Markdown and markup formatter | This extension in Gitpod was used to format the README and html file. |
-| [Tinify](https://tinypng.com/)                                               |     Images      |        Compress images        | This tool was used to compress images for optimization.               |
-| [remove.bg](https://www.remove.bg/upload)                                    |      Icons      |             Tool              | Used to remove background on the icon 1 and 2.                        |
+| Source                                                                       | Location        | Type                          | Notes                                                                                     |
+| ---------------------------------------------------------------------------- | :-------------- | :---------------------------- | :---------------------------------------------------------------------------------------- |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                      | Colours         | Tool                          | Control of contrast for accesibility.                                                     |
+| [Gitpod](https://www.gitpod.io/)                                             | IDE             | Tool                          | To edit code.                                                                             |
+| [GitHub](https://www.gitpod.io/)                                             | Version control | Tool                          | Used to create repository, version control and deployment.                                |
+| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                        | head            | Favicon resource              | Get an icon in the head of the index.html file.                                           |
+| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode) | README          | Markdown and markup formatter | This extension in Gitpod was used to format the README and html file.                     |
+| [Tinify](https://tinypng.com/)                                               | Images          | Compress images               | This tool was used to compress images for optimization.                                   |
+| [remove.bg](https://www.remove.bg/upload)                                    | Icons           | Tool                          | Used to remove background on the icon 1 and 2.                                            |
+| [CorsProxy.io](https://corsproxy.io/)                                        | for loop images | Proxy                         | To enable the fetch() method in the for loop where I send the request to the Random-d.uk. |
+| [Random-d.uk](https://random-d.uk/)                                          | for loop images | API                           | The website for the API that generates the images for the cards in the game.              |
 
 ### Languages
 
@@ -139,26 +141,26 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 ### Frameworks
 
-| Source      |  Location   |    Type     | Notes       |
-| ----------- | :---------: | :---------: | :---------- |
+| Source      | Location    | Type        | Notes       |
+| ----------- | :---------- | :---------- | :---------- |
 | Placeholder | Placeholder | Placeholder | Placeholder |
 
 ### Libraries
 
-| Source                                      | Location |  Type   | Notes                                                      |
-| ------------------------------------------- | :------: | :-----: | :--------------------------------------------------------- |
-| [w3schools](https://www.w3schools.com/)     |  Syntax  | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
-| [Bootstrap](https://getbootstrap.com/)      |  Syntax  | Library | For syntac and to ensure a responsive website.             |
-| [Google fonts](https://fonts.google.com/)   |  Fonts   |  Tool   | Used to pick fonts for the website.                        |
-| [Mdn](https://developer.mozilla.org/en-US/) |  Syntax  |  Tool   | Find and use JavaScript syntax.                            |
+| Source                                      | Location | Type    | Notes                                                      |
+| ------------------------------------------- | :------- | :------ | :--------------------------------------------------------- |
+| [w3schools](https://www.w3schools.com/)     | Syntax   | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
+| [Bootstrap](https://getbootstrap.com/)      | Syntax   | Library | For syntac and to ensure a responsive website.             |
+| [Google fonts](https://fonts.google.com/)   | Fonts    | Tool    | Used to pick fonts for the website.                        |
+| [Mdn](https://developer.mozilla.org/en-US/) | Syntax   | Tool    | Find and use JavaScript syntax.                            |
 
 ### Programs
 
-| Source                                                         |     Location     | Type | Notes                                                                                                |
-| -------------------------------------------------------------- | :--------------: | :--: | :--------------------------------------------------------------------------------------------------- |
-| [Balsamiq](https://balsamiq.com/)                              |    Wireframes    | Tool | Used to create wireframes for the project.                                                           |
-| [ChatGPT](https://openai.com/)                                 |   Images, text   | Tool | Used to create images/icons and correct texts. Also a tool to make the texts more funny and vibrant. |
-| [Figma](https://testsigma.com/blog/common-screen-resolutions/) | Colours, mock-up | Tool | Create colour scheme, contrast checker and mock-up.                                                  |
+| Source                                                         | Location         | Type | Notes                                                                                                                                                                                                    |
+| -------------------------------------------------------------- | :--------------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Balsamiq](https://balsamiq.com/)                              | Wireframes       | Tool | Used to create wireframes for the project.                                                                                                                                                               |
+| [ChatGPT](https://openai.com/)                                 | Images, text     | Tool | Used to create images and icons, as well as refine and correct text. Also serves as a tool to make text more engaging, humorous, and vibrant. Provides guidance when internet searches are insufficient. |
+| [Figma](https://testsigma.com/blog/common-screen-resolutions/) | Colours, mock-up | Tool | Create colour scheme, contrast checker and mock-up.                                                                                                                                                      |
 
 ## Deployment
 
@@ -223,6 +225,14 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ![The code to show the Bootstrap modal](./docs/screenshots/bugs/bug_modal_not_showing.png)
 
+**Bug 6: Cors policy**
+
+When trying to GET the images from the API Random-d.uk I got the following error message:
+
+![An image of the error message for the CORS policy](./docs/screenshots/bugs/bug_cors_policy.png)
+
+I initially tried using mode: "no-cors" to resolve the issue, but it didn't work as expected. After researching alot online, I turned to ChatGPT. It explained that the error was due to the target website's Cross-Origin Resource Sharing (CORS) policy, which blocks requests from my origin. To resolve this, I used a proxy service (CorsProxy.io) that adds the necessary headers to the response which fixed the issue.
+
 ### Browser testing
 
 | Browser |        Layout        | functionality | ✔️ ❌ |
@@ -234,8 +244,8 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ### Manual testing
 
-|   Feature   |   Expect    |   Action    |   Result    |
-| :---------: | :---------: | :---------: | :---------: |
+| Feature     | Expect      | Action      | Result      |
+| :---------- | :---------- | :---------- | :---------- |
 | Placeholder | Placeholder | Placeholder | Placeholder |
 | Placeholder | Placeholder | Placeholder | Placeholder |
 
@@ -256,11 +266,11 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ## Credits
 
-| Source                                                                               |     Location      |   Type   | Notes                                                                                                    |
-| ------------------------------------------------------------------------------------ | :---------------: | :------: | :------------------------------------------------------------------------------------------------------- |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) |    Wireframes     |   Book   | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| Source                                                                               | Location          | Type     | Notes                                                                                                    |
+| ------------------------------------------------------------------------------------ | :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) | Wireframes        | Book     | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
-| [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  |  data attributes  | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
-| [Pexels](https://www.pexels.com/search/duck/)                                        |    Duck images    | Resource | Where I got the free to use duck images.                                                                 |
-| [Stackoverflow(1)](https://shorturl.at/TOVcr)                                        |    Syntax/bug     | Resource | To freeze the player's board before two pictures are flipped back.                                       |
-| [Stackoverflow(2)](https://shorturl.at/U3AUw)                                        |   Syntax/button   | Resource | How to add and remove disabled to the reset button.                                                      |
+| [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  | data attributes   | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
+| [Pexels](https://www.pexels.com/search/duck/)                                        | Duck images       | Resource | Where I got the free to use duck images.                                                                 |
+| [Stackoverflow(1)](https://shorturl.at/TOVcr)                                        | Syntax/bug        | Resource | To freeze the player's board before two pictures are flipped back.                                       |
+| [Stackoverflow(2)](https://shorturl.at/U3AUw)                                        | Syntax/button     | Resource | How to add and remove disabled to the reset button.                                                      |
