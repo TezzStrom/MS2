@@ -265,7 +265,17 @@ This is something that could lead to problems with older versions of JavaScript 
 
 ### Lighthouse audit
 
+![Lighthouse audit](./docs/testing/lighthouse_testing.png)
+
+- There are some render-blocking resources but I can't fix that with the current scope of my knowledge.
+
+![Eliminate render-blocking resources](./docs/testing/lighthouse_testing_bootstrap.png)
+
+![Lighthouse audit of the best practices](./docs/testing/lighthouse_testing_best_practice.png)
+
 #### Accesibility testing
+
+![The score from the lighthouse audit](./docs/testing/lighthouse_testing_accesibility.png)
 
 ### Bugs
 
