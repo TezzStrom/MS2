@@ -57,11 +57,9 @@ img {
 /* Flip-card styling, taken from w3school*/
 .flip-card {
   background-color: transparent;
-  width: 300px;
   aspect-ratio: 1;
   border: none;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  padding: 0;
 }
 
 /* This container is needed to position the front and back side */

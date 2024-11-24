@@ -266,11 +266,12 @@ I initially tried using mode: "no-cors" to resolve the issue, but it didn't work
 
 ## Credits
 
-| Source                                                                               | Location          | Type     | Notes                                                                                                    |
-| ------------------------------------------------------------------------------------ | :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
-| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition) | Wireframes        | Book     | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
-| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                   | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
-| [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                  | data attributes   | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
-| [Pexels](https://www.pexels.com/search/duck/)                                        | Duck images       | Resource | Where I got the free to use duck images.                                                                 |
-| [Stackoverflow(1)](https://shorturl.at/TOVcr)                                        | Syntax/bug        | Resource | To freeze the player's board before two pictures are flipped back.                                       |
-| [Stackoverflow(2)](https://shorturl.at/U3AUw)                                        | Syntax/button     | Resource | How to add and remove disabled to the reset button.                                                      |
+| Source                                                                                   | Location          | Type     | Notes                                                                                                    |
+| ---------------------------------------------------------------------------------------- | :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
+| Designing Interfaces Patterns for Effective Interaction Design (2020, third edition)     | Wireframes        | Book     | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
+| [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                       | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
+| [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                      | data attributes   | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
+| [Pexels](https://www.pexels.com/search/duck/)                                            | Duck images       | Resource | Where I got the free to use duck images.                                                                 |
+| [Stackoverflow(1)](https://shorturl.at/TOVcr)                                            | Syntax/bug        | Resource | To freeze the player's board before two pictures are flipped back.                                       |
+| [Stackoverflow(2)](https://shorturl.at/U3AUw)                                            | Syntax/button     | Resource | How to add and remove disabled to the reset button.                                                      |
+| [marina-ferreira.github.io](https://marina-ferreira.github.io/tutorials/js/memory-game/) | Syntax            | Resource | Shuffle function and position in JavaScript file.                                                        |

@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let lockBoard = false;
   let scoreCount = 0;
 
+  // Calling the functions to set initial game state
+  setDuckImages();
+  shuffleCards();
+
   // Player's turn
   function clickedCard(e) {
     //Lockboard from Stackoverflow(1), see credits
@@ -149,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resetButton.style.pointerEvents = "none";
 
     setDuckImages();
+    shuffleCards();
   }
 
   function changeRestartButtonState() {
@@ -189,14 +194,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  setDuckImages();
-
   function shuffleCards() {
-    for (let i = cards.length - 1; i > 0; i--) {
+    const positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    // The Fisher Yates Algorithm to shuffle cards from w3schools
+    for (let i = positions.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
-      let k = cards[i];
-      cards[i] = cards[j];
-      cards[j] = k;
+      let k = positions[i];
+      positions[i] = positions[j];
+      positions[j] = k;
     }
+
+    // Base code from marina-ferreira.github.io, see credits
+    cards.forEach((card, index) => {
+      card.style.order = positions[index];
+    });
   }
 });
