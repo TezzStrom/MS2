@@ -323,11 +323,11 @@ When testing the game to see if everything worked, I stumbled upon a bug where I
 
 ### Browser testing
 
-| Browser |        Layout        | functionality | ✔️ ❌ |
-| ------- | :------------------: | :-----------: | :---: |
+| Browser |        Layout        | functionality |
+| ------- | :------------------: | :-----------: |
 | Chrome  |          ✔️          |      ✔️       |
 | Firefox |          ✔️          |      ✔️       |
-| Edge    |          ❌          |      ❌       |
+| Edge    |          ✔️          |      ✔️       |
 | Safari  | No access to Browser |       -       |
 
 ### Manual testing
