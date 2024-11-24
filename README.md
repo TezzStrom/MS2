@@ -233,6 +233,14 @@ When trying to GET the images from the API Random-d.uk I got the following error
 
 I initially tried using mode: "no-cors" to resolve the issue, but it didn't work as expected. After researching alot online, I turned to ChatGPT. It explained that the error was due to the target website's Cross-Origin Resource Sharing (CORS) policy, which blocks requests from my origin. To resolve this, I used a proxy service (CorsProxy.io) that adds the necessary headers to the response which fixed the issue.
 
+#### Known bugs
+
+**Bug 7: Double images**
+
+When testing the game to see if everything worked, I stumbled upon a bug where I got the same image two times. It's very unlikely since there are 347 images/gifs available.
+
+![Same image two times](./docs/screenshots/bugs/bug_same_image.png)
+
 ### Browser testing
 
 | Browser |        Layout        | functionality | ✔️ ❌ |
