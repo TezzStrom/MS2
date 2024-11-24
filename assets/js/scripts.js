@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //Lockboard from Stackoverflow(1), see credits
     if (lockBoard) return;
     const card = e.currentTarget;
-    console.log("Clicked card", card);
 
     const identifier = card.dataset.identifier;
     // Exit function if clicked card is part of an already matching pair
@@ -45,14 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!cardOne) {
       // Store as first card
       cardOne = card;
-      console.log("cardOne", cardOne);
     } else {
       if (cardOne === card) {
         return;
       }
       // Store as second card
       cardTwo = card;
-      console.log("cardTwo", cardTwo);
 
       matchCards(identifier, cardOne, cardTwo);
     }
@@ -63,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cardOne.dataset.identifier === cardTwo.dataset.identifier) {
       // Yes, keep cards face up
       matchedPairs.push(identifier);
-      console.log("match", identifier);
       resetCards();
     } else {
       //Delay before turning back cards
@@ -73,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // No, flip cards back down
         cardOne.dataset.flipped = false;
         cardTwo.dataset.flipped = false;
-        console.log("Flipping back");
         resetCards();
         //Lockboard from Stackoverflow(1), see credits
         lockBoard = false;
@@ -87,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset card selection
     cardOne = null;
     cardTwo = null;
-    console.log("Reset turn");
   }
 
   // Adds to the scorecount when two cards are matched
@@ -99,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Updates the score text in HTML document
   function updateScore(score) {
     const counterMoves = document.getElementById("counter-moves");
-    console.log("plus score", counterMoves);
     counterMoves.textContent = score;
   }
 
@@ -150,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Adds the disabled state to the reset button
     // Credit Stackoverflow(2), how to add disabled to the reset button.
     resetButton.disabled = true;
-    resetButton.style.pointerEvents = "none";
 
     setDuckImages();
     shuffleCards();
@@ -163,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
       resetButton.removeAttribute("disabled");
       resetButton.classList.remove("disabled-button");
       resetButton.classList.add("button-main");
-      resetButton.style.pointerEvents = "";
     } else {
       resetButton.classList.remove("button-main");
       resetButton.classList.add("disabled-button");
