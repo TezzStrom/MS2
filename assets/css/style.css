@@ -114,7 +114,6 @@ img {
 
 .button-main {
   color: var(--fifth-color);
-  pointer-events: auto;
 }
 
 .button-main:hover {

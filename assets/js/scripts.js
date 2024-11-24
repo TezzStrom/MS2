@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let scoreCount = 0;
 
   // Calling the functions to set initial game state
+  const proxyUrl =
+    "https://corsproxy.io/?" +
+    encodeURIComponent("https://random-d.uk/api/v2/random");
   setDuckImages();
   shuffleCards();
 
@@ -168,9 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setDuckImages() {
     // Fetch 6 images via API, see credits for proxy and duck API
-    const proxyUrl =
-      "https://corsproxy.io/?" +
-      encodeURIComponent("https://random-d.uk/api/v2/random");
     for (let i = 0; i < 6; i++) {
       fetch(proxyUrl)
         .then((response) => response.json())
