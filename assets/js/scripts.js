@@ -154,13 +154,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setDuckImages();
     shuffleCards();
+    changeRestartButtonState();
   }
 
   function changeRestartButtonState() {
     //Removes the buttons disabled state when first score is counted
-    if (matchedPairs.length > 0) {
+    if (scoreCount > 0) {
       resetButton.removeAttribute("disabled");
-      resetButton.style.pointerEvents = "auto";
+      resetButton.classList.remove("disabled-button");
+      resetButton.classList.add("button-main");
+      resetButton.style.pointerEvents = "";
+    } else {
+      resetButton.classList.remove("button-main");
+      resetButton.classList.add("disabled-button");
     }
   }
 
