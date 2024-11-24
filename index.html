@@ -48,15 +48,14 @@
                     </button>
                 </div>
                 <!--Modal for how to play-->
-                <div class="modal fade" id="how-to-play" tabindex="-1" aria-labelledby="how-to-play-modal-label"
-                    aria-hidden="true">
+                <div class="modal fade" id="how-to-play" tabindex="-1" aria-labelledby="how-to-play-modal-label">
                     <div class="modal-dialog modal-lg">
                         <!--Padding on the modal to give it a bit more breathing space and get a less cramped feeling-->
                         <div class="modal-content p-3">
                             <div class="modal-header">
                                 <h1 id="how-to-play-modal-label" class="modal-title">Instructions</h1>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                    aria-label="Close" aria-hidden="true"></button>
                             </div>
                             <div class="modal-body">
                                 <p class="prose">
@@ -89,7 +88,8 @@
                                 </p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="button-main" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="button-main" data-bs-dismiss="modal"
+                                    aria-hidden="true">Close</button>
                             </div>
                         </div>
                     </div>

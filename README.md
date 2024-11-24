@@ -325,8 +325,8 @@ When testing the game to see if everything worked, I stumbled upon a bug where I
 
 | Browser |        Layout        | functionality | ✔️ ❌ |
 | ------- | :------------------: | :-----------: | :---: |
-| Chrome  |          ❌          |      ❌       |
-| Firefox |          ❌          |      ❌       |
+| Chrome  |          ✔️          |      ✔️       |
+| Firefox |          ✔️          |      ✔️       |
 | Edge    |          ❌          |      ❌       |
 | Safari  | No access to Browser |       -       |
 

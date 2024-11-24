@@ -130,6 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function resetGame() {
+    lockBoard = true;
+
+    // Reset cards
+    const cards = document.querySelectorAll(".flip-card");
+    cards.forEach((card) => (card.dataset.flipped = false));
+
     // Reset game variables
     matchedPairs = [];
     cardOne = null;
@@ -139,17 +145,20 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreCount = 0;
     updateScore(scoreCount);
 
-    // Reset cards
-    const cards = document.querySelectorAll(".flip-card");
-    cards.forEach((card) => (card.dataset.flipped = false));
-
     // Adds the disabled state to the reset button
     // Credit Stackoverflow(2), how to add disabled to the reset button.
     resetButton.disabled = true;
 
-    setDuckImages();
-    shuffleCards();
     changeRestartButtonState();
+
+    // Time delay so the new images doesn't show while turning back
+    setTimeout(() => {
+      setDuckImages();
+      shuffleCards();
+
+      //Lockboard from Stackoverflow(1), see credits
+      lockBoard = false;
+    }, 1500);
   }
 
   function changeRestartButtonState() {
