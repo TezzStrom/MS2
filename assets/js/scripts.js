@@ -147,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Credit Stackoverflow(2), how to add disabled to the reset button.
     resetButton.disabled = true;
     resetButton.style.pointerEvents = "none";
+
+    setDuckImages();
   }
 
   function changeRestartButtonState() {
@@ -160,5 +162,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Walks through cards for eventlistener
   for (let index = 0; index < cards.length; index++) {
     cards[index].addEventListener("click", clickedCard);
+  }
+
+  function setDuckImages() {
+    // Fetch 6 images via API, see credits for proxy and duck API
+    const proxyUrl =
+      "https://corsproxy.io/?" +
+      encodeURIComponent("https://random-d.uk/api/v2/random");
+    for (let i = 0; i < 6; i++) {
+      fetch(proxyUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          const dataIdentifier = i + 1;
+          const cardsToGetImage = document.querySelectorAll(
+            `[data-identifier="${dataIdentifier}"] .flip-card-back`
+          );
+          cardsToGetImage.forEach((card) => {
+            const imgElement = document.createElement("img");
+            imgElement.setAttribute("src", data.url);
+            imgElement.setAttribute("alt", "an image of a duck");
+            imgElement.classList.add("duck-image");
+            card.replaceChildren(imgElement);
+          });
+        })
+        .catch((error) => console.error("Error:", error));
+    }
+  }
+
+  setDuckImages();
+
+  function shuffleCards() {
+    for (let i = cards.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let k = cards[i];
+      cards[i] = cards[j];
+      cards[j] = k;
+    }
   }
 });

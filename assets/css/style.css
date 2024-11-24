@@ -45,7 +45,12 @@ h2 {
 
 /* Default for all images, avoid overflow */
 img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#surprised-duck {
+  max-width: 200px;
   height: auto;
 }
 
@@ -120,4 +125,11 @@ img {
 /* Modals */
 .modal-content {
   background-color: var(--primary-color);
+}
+
+.duck-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
