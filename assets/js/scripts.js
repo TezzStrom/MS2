@@ -1,14 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Global variables
+let cardOne = null;
+let cardTwo = null;
+let matchedPairs = [];
+let lockBoard = false;
+let scoreCount = 0;
+let timeoutId = null;
+
+const MAX_IMAGES = 6;
+
+function initializeGame() {
   const CARDS = document.querySelectorAll(".flip-card");
-
-  // Global variables
-  let cardOne = null;
-  let cardTwo = null;
-  let matchedPairs = [];
-  let lockBoard = false;
-  let scoreCount = 0;
-
-  const MAX_IMAGES = 6;
 
   // Calling the functions to set initial game state
   assignDuckImagesToCards();
@@ -64,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
       clearSelectedCards();
     } else {
       //Lockboard from Stackoverflow(1), see credits
-      setTimeout(() => {
+      lockBoard = true;
+      timeoutId = setTimeout(() => {
         cardOne.dataset.flipped = false;
         cardTwo.dataset.flipped = false;
         clearSelectedCards();
@@ -116,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const RESET_BUTTON = document.getElementById("restart-button");
-  // Eventlistener for when the reset button is pressed, calls the function to reset the game
+  // Eventlistener for when the reset button is pressed
   RESET_BUTTON.addEventListener("click", () => {
     resetGame();
   });
@@ -124,6 +126,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // This function handles the events for when the game is reset
   function resetGame() {
     lockBoard = true;
+
+    //Prevents timeout in evaluateCardMatch from finishing if pressing reset button,
+    //this to prevent the shuffleCards to run after first card is clicked after reset.
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      timeoutId = null;
+    }
 
     // Turns all the cards face-down
     CARDS.forEach((card) => (card.dataset.flipped = false));
@@ -206,4 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.order = POSITIONS[index];
     });
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", initializeGame);
