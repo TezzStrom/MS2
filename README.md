@@ -370,6 +370,10 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ### Browser testing
 
+**Layout:** Testing layout and the appearance of the site for consistency of UI.
+
+**Functionality:** Ensuring that there is a consistency in the functionality.
+
 | Browser |        Layout        | functionality |
 | ------- | :------------------: | :-----------: |
 | Chrome  |          ✔️          |      ✔️       |
@@ -379,10 +383,14 @@ When the user has matched all pairs, I wanted a modal to appear congratulating t
 
 ### Manual testing
 
-| Feature     | Expect      | Action      | Result      |
-| :---------- | :---------- | :---------- | :---------- |
-| Placeholder | Placeholder | Placeholder | Placeholder |
-| Placeholder | Placeholder | Placeholder | Placeholder |
+| Feature            | Expect                                                                                                                       | Action                 | Result                                                                                                             |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------- | :--------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| Cards              | When clicking two cards the cards should turn around.                                                                        | Clicking on two cards. | The cards turns around.                                                                                            |
+| Cards              | If matching pair they should stay open, otherwise they should turn back again.                                               | Clicking on two cards. | The matching pairs stay up, unmatched pairs turns back.                                                            |
+| How to play button | If _How to play_ button is clicked, a modal should appear with instructions.                                                 | Clicking the button.   | From the top och the window, a modal fades in revealing instructions.                                              |
+| Restart button     | If _Restart_ button is clicked, the cards that are turned should turn back and the score should reset to zero.               | Clicking the button.   | The cards resets, the card turned around turns back down. The score is set to zero.                                |
+| Win modal          | When all the cards have been matched, a modal should appear with content congratulating the player to the win.               | Turning all cards.     | When the all the cards are paired, a modal appears from the top window with content that congratulates the winner. |
+| Play again button  | When the _Play again!_ button is clicked, the modal should appear and the game reset with all the cards turning back around. | Clicking the button.   | The modal fades out and all the cards resets, turning back down.                                                   |
 
 ### Manual testing: User stories
 
