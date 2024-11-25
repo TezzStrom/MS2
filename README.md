@@ -177,17 +177,15 @@ Bottom view on mobile version
 
 ## Technologies used
 
-| Source                                                                       | Location        | Type                          | Notes                                                                                     |
-| ---------------------------------------------------------------------------- | :-------------- | :---------------------------- | :---------------------------------------------------------------------------------------- |
-| [WebAIM](https://webaim.org/resources/contrastchecker/)                      | Colours         | Tool                          | Control of contrast for accesibility.                                                     |
-| [Gitpod](https://www.gitpod.io/)                                             | IDE             | Tool                          | To edit code.                                                                             |
-| [GitHub](https://www.gitpod.io/)                                             | Version control | Tool                          | Used to create repository, version control and deployment.                                |
-| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                        | head            | Favicon resource              | Get an icon in the head of the index.html file.                                           |
-| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode) | README          | Markdown and markup formatter | This extension in Gitpod was used to format the README and html file.                     |
-| [Tinify](https://tinypng.com/)                                               | Images          | Compress images               | This tool was used to compress images for optimization.                                   |
-| [remove.bg](https://www.remove.bg/upload)                                    | Icons           | Tool                          | Used to remove background on the icon 1 and 2.                                            |
-| [CorsProxy.io](https://corsproxy.io/)                                        | for loop images | Proxy                         | To enable the fetch() method in the for loop where I send the request to the Random-d.uk. |
-| [Random-d.uk](https://random-d.uk/)                                          | for loop images | API                           | The website for the API that generates the images for the cards in the game.              |
+| Source                                                                       | Location        | Type                          | Notes                                                                 |
+| ---------------------------------------------------------------------------- | :-------------- | :---------------------------- | :-------------------------------------------------------------------- |
+| [WebAIM](https://webaim.org/resources/contrastchecker/)                      | Colours         | Tool                          | Control of contrast for accesibility.                                 |
+| [Gitpod](https://www.gitpod.io/)                                             | IDE             | Tool                          | To edit code.                                                         |
+| [GitHub](https://www.gitpod.io/)                                             | Version control | Tool                          | Used to create repository, version control and deployment.            |
+| [Favicon.io](https://favicon.io/emoji-favicons/duck/)                        | head            | Favicon resource              | Get an icon in the head of the index.html file.                       |
+| [Prettier](https://open-vsx.org/vscode/item?itemName=esbenp.prettier-vscode) | README          | Markdown and markup formatter | This extension in Gitpod was used to format the README and html file. |
+| [Tinify](https://tinypng.com/)                                               | Images          | Compress images               | This tool was used to compress images for optimization.               |
+| [remove.bg](https://www.remove.bg/upload)                                    | Icons           | Tool                          | Used to remove background on the icon 1 and 2.                        |
 
 ### Code validation
 
@@ -211,10 +209,10 @@ The project utilizes HTML, CSS, and JavaScript to develop an interactive game en
 
 | Source                                      | Location | Type    | Notes                                                      |
 | ------------------------------------------- | :------- | :------ | :--------------------------------------------------------- |
-| [w3schools](https://www.w3schools.com/)     | Syntax   | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
 | [Bootstrap](https://getbootstrap.com/)      | Syntax   | Library | For syntac and to ensure a responsive website.             |
 | [Google fonts](https://fonts.google.com/)   | Fonts    | Tool    | Used to pick fonts for the website.                        |
 | [Mdn](https://developer.mozilla.org/en-US/) | Syntax   | Tool    | Find and use JavaScript syntax.                            |
+| [w3schools](https://www.w3schools.com/)     | Syntax   | Library | To find solutions and syntax for HTML, CSS and JavaScript. |
 
 ### Programs
 
@@ -236,6 +234,8 @@ When the header was created, I decided to deploy the website to test the deploye
 - Go back to the <> Code tab.
 - Select deployments.
 - Click the provided link.
+
+[Link to GitHub repository](https://github.com/TezzStrom/MS2-What-the-duck)
 
 ## Testing
 
@@ -369,7 +369,6 @@ When testing the game to see if everything worked, I stumbled upon a bug where I
 | Designing Interfaces Patterns for Effective Interaction Design (2020, third edition)     | Wireframes        | Book     | To choose common interface patterns to ensure a user-friendly interface and effective interactiondesign. |
 | [testsigma](https://testsigma.com/blog/common-screen-resolutions/)                       | Screen resolution | Resource | Follow the standard/common screen resolution to ensure responsiveness to devices.                        |
 | [CSS-tricks](https://css-tricks.com/almanac/selectors/a/attribute/)                      | data attributes   | Resource | To understand how to include a data-attribute in the css file for the flip effect.                       |
-| [Pexels](https://www.pexels.com/search/duck/)                                            | Duck images       | Resource | Where I got the free to use duck images.                                                                 |
 | [Stackoverflow(1)](https://shorturl.at/TOVcr)                                            | Syntax/bug        | Resource | To freeze the player's board before two pictures are flipped back.                                       |
 | [Stackoverflow(2)](https://shorturl.at/U3AUw)                                            | Syntax/button     | Resource | How to add and remove disabled to the reset button.                                                      |
 | [marina-ferreira.github.io](https://marina-ferreira.github.io/tutorials/js/memory-game/) | Syntax            | Resource | Shuffle function and position in JavaScript file.                                                        |
