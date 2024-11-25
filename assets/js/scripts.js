@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".flip-card");
+  const CARDS = document.querySelectorAll(".flip-card");
 
   // Global variables
   let cardOne = null;
@@ -8,148 +8,140 @@ document.addEventListener("DOMContentLoaded", function () {
   let lockBoard = false;
   let scoreCount = 0;
 
+  const MAX_IMAGES = 6;
+
   // Calling the functions to set initial game state
-  setDuckImages();
+  assignDuckImagesToCards();
   shuffleCards();
 
-  function onClickedCard(e) {
+  function handleCardClick(e) {
     //Lockboard from Stackoverflow(1), see credits
-    if (lockBoard) return;
-    const CARD = e.currentTarget;
-
-    const IDENTIFIER = CARD.dataset.identifier;
-    // Exit function if clicked card is part of an already matching pair
-    if (matchedCard(IDENTIFIER)) {
+    if (lockBoard) {
       return;
     }
 
-    flipCard(CARD);
-    logCards(CARD, IDENTIFIER);
-    changeRestartButtonState();
+    const CARD = e.currentTarget;
+
+    const IDENTIFIER = CARD.dataset.identifier;
+    if (isCardMatched(IDENTIFIER)) {
+      return;
+    }
+
+    revealCard(CARD);
+    trackSelectedCards(CARD, IDENTIFIER);
+    updateRestartButtonState();
   }
 
-  // Select a card
-  function flipCard(card) {
+  // This function turns a card to reveal the image on the backside
+  function revealCard(card) {
     card.dataset.flipped = true;
   }
 
-  // Checks if clicked card is part of an already matching pair
-  function matchedCard(identifier) {
+  // This function checks if clicked card is part of an already matching pair
+  function isCardMatched(identifier) {
     return matchedPairs.includes(identifier);
   }
 
-  function logCards(card, identifier) {
-    // Is this first or second card?
+  // This function tracks the clicked card and checks if the cards are a match, if they are, stores them in the matchedPairs array
+  function trackSelectedCards(card, identifier) {
     if (!cardOne) {
-      // Store as first card
       cardOne = card;
     } else {
       // Prevents clicking the same card twice
       if (cardOne === card) {
         return;
       }
-      // Store as second card
       cardTwo = card;
 
-      matchCards(identifier, cardOne, cardTwo);
+      evaluateCardMatch(identifier, cardOne, cardTwo);
     }
   }
 
-  function matchCards(identifier, cardOne, cardTwo) {
-    // Cards match?
+  // This function evaluates if the turned cards match
+  function evaluateCardMatch(identifier, cardOne, cardTwo) {
     if (cardOne.dataset.identifier === cardTwo.dataset.identifier) {
-      // Yes, keep cards face up
       matchedPairs.push(identifier);
-      resetCards();
+      clearSelectedCards();
     } else {
-      //Delay before turning back cards
       //Lockboard from Stackoverflow(1), see credits
-      lockBoard = true;
       setTimeout(() => {
-        // No, flip cards back down
         cardOne.dataset.flipped = false;
         cardTwo.dataset.flipped = false;
-        resetCards();
-        //Lockboard from Stackoverflow(1), see credits
+        clearSelectedCards();
         lockBoard = false;
       }, 1500);
     }
-    countMoves();
-    checkMatchedPairsLength(scoreCount);
+    incrementScore();
+    checkGameCompletion(scoreCount);
   }
 
-  function resetCards() {
-    // Reset card selection
+  // This function resets the values of card one and card two
+  function clearSelectedCards() {
     cardOne = null;
     cardTwo = null;
   }
 
-  // Adds to the scorecount when two cards are matched
-  function countMoves() {
+  // This function adds +1 to the moves counter everytime two cards are turned
+  function incrementScore() {
     scoreCount++;
     updateScore(scoreCount);
   }
 
-  // Updates the score text in HTML document
+  // This function updates the score text in HTML document
   function updateScore(score) {
     const COUNTER_MOVES = document.getElementById("counter-moves");
     COUNTER_MOVES.textContent = score;
   }
 
-  function checkMatchedPairsLength(scoreCount) {
-    if (matchedPairs.length === 6) {
+  // This function checks if the game has been completed and handles the actions if true.
+  function checkGameCompletion(scoreCount) {
+    if (matchedPairs.length === MAX_IMAGES) {
       const MODAL_SHOW = document.getElementById("player-win");
       const MOVES_COUNT_ELEMENT = document.getElementById("moves-count");
 
-      // Update modal content with scorecount
+      // Update modal content with the scorecount
       MOVES_COUNT_ELEMENT.textContent = scoreCount;
 
-      //Show modal (Bug 5: solved with Bootstrap documentation)
+      //Shows the win modal with a time delay so the user has time to see the turned cards image before showing
       setTimeout(() => {
         const BOOTSTRAP_MODAL = new bootstrap.Modal(MODAL_SHOW);
         BOOTSTRAP_MODAL.show();
       }, 900);
 
-      // Eventlisteners for play again button in modal
       const PLAY_AGAIN_BUTTON = document.getElementById("play-again");
-
-      // Eventlistener for the play again button in the win modal, calls the function that resets the game
       PLAY_AGAIN_BUTTON.addEventListener("click", function () {
         resetGame();
       });
     }
   }
 
-  // Eventlistener for when the reset button is pressed, calls the function to reset the game
   const RESET_BUTTON = document.getElementById("restart-button");
+  // Eventlistener for when the reset button is pressed, calls the function to reset the game
   RESET_BUTTON.addEventListener("click", () => {
     resetGame();
   });
 
+  // This function handles the events for when the game is reset
   function resetGame() {
     lockBoard = true;
 
-    // Reset cards
+    // Turns all the cards face-down
     CARDS.forEach((card) => (card.dataset.flipped = false));
 
-    // Reset game variables
     matchedPairs = [];
-    cardOne = null;
-    cardTwo = null;
+    clearSelectedCards();
 
-    // Reset scoreCount
     scoreCount = 0;
     updateScore(scoreCount);
 
-    // Adds the disabled state to the reset button
     // Credit Stackoverflow(2), how to add disabled to the reset button.
     RESET_BUTTON.disabled = true;
 
-    changeRestartButtonState();
+    updateRestartButtonState();
 
     // Time delay so the new images doesn't show while turning back
     setTimeout(() => {
-      setDuckImages();
+      assignDuckImagesToCards();
       shuffleCards();
 
       //Lockboard from Stackoverflow(1), see credits
@@ -157,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1500);
   }
 
-  function changeRestartButtonState() {
-    //Removes the buttons disabled state when first score is counted
+  // This function handles the disabled and enabled states for the reset game button
+  function updateRestartButtonState() {
     if (scoreCount > 0) {
       RESET_BUTTON.removeAttribute("disabled");
       RESET_BUTTON.classList.remove("disabled-button");
@@ -169,13 +161,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Walks through cards for eventlistener
-  for (let index = 0; index < cards.length; index++) {
-    cards[index].addEventListener("click", onClickedCard);
+  for (let index = 0; index < CARDS.length; index++) {
+    CARDS[index].addEventListener("click", handleCardClick);
   }
 
-  function setDuckImages() {
-    for (let i = 0; i < 6; i++) {
+  // This function assigns the images in the project to the cards on the game board
+  function assignDuckImagesToCards() {
+    for (let i = 0; i < MAX_IMAGES; i++) {
       const DATA_IDENTIFIER = i + 1;
       const CARDS_TO_GET_IMAGE = document.querySelectorAll(
         `[data-identifier="${DATA_IDENTIFIER}"] .flip-card-back`
@@ -193,8 +185,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // This function handles the shuffling event of the cards
   function shuffleCards() {
-    const POSITIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const POSITIONS = [];
+    for (let i = 0; i < MAX_IMAGES * 2; i++) {
+      POSITIONS.push(i + 1);
+    }
 
     // The Fisher Yates Algorithm to shuffle cards from w3schools
     for (let i = POSITIONS.length - 1; i > 0; i--) {
@@ -206,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Base code from marina-ferreira.github.io, see credits
     // Sets the cards position using flex order
-    cards.forEach((card, index) => {
+    CARDS.forEach((card, index) => {
       card.style.order = POSITIONS[index];
     });
   }
