@@ -9,26 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
   let scoreCount = 0;
 
   // Calling the functions to set initial game state
-  const proxyUrl =
-    "https://corsproxy.io/?" +
-    encodeURIComponent("https://random-d.uk/api/v2/random");
   setDuckImages();
   shuffleCards();
 
-  // Player's turn
-  function clickedCard(e) {
+  function onClickedCard(e) {
     //Lockboard from Stackoverflow(1), see credits
     if (lockBoard) return;
-    const card = e.currentTarget;
+    const CARD = e.currentTarget;
 
-    const identifier = card.dataset.identifier;
+    const IDENTIFIER = CARD.dataset.identifier;
     // Exit function if clicked card is part of an already matching pair
-    if (matchedCard(identifier) === true) {
+    if (matchedCard(IDENTIFIER)) {
       return;
     }
 
-    flipCard(card);
-    logCards(card, identifier);
+    flipCard(CARD);
+    logCards(CARD, IDENTIFIER);
     changeRestartButtonState();
   }
 
@@ -48,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Store as first card
       cardOne = card;
     } else {
+      // Prevents clicking the same card twice
       if (cardOne === card) {
         return;
       }
@@ -95,37 +92,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Updates the score text in HTML document
   function updateScore(score) {
-    const counterMoves = document.getElementById("counter-moves");
-    counterMoves.textContent = score;
+    const COUNTER_MOVES = document.getElementById("counter-moves");
+    COUNTER_MOVES.textContent = score;
   }
 
   function checkMatchedPairsLength(scoreCount) {
     if (matchedPairs.length === 6) {
-      const modalShow = document.getElementById("player-win");
-      const movesCountElement = document.getElementById("moves-count");
+      const MODAL_SHOW = document.getElementById("player-win");
+      const MOVES_COUNT_ELEMENT = document.getElementById("moves-count");
 
       // Update modal content with scorecount
-      movesCountElement.textContent = scoreCount;
+      MOVES_COUNT_ELEMENT.textContent = scoreCount;
 
       //Show modal (Bug 5: solved with Bootstrap documentation)
       setTimeout(() => {
-        const bootstrapModal = new bootstrap.Modal(modalShow);
-        bootstrapModal.show();
+        const BOOTSTRAP_MODAL = new bootstrap.Modal(MODAL_SHOW);
+        BOOTSTRAP_MODAL.show();
       }, 900);
 
       // Eventlisteners for play again button in modal
-      const playAgainButton = document.getElementById("play-again");
+      const PLAY_AGAIN_BUTTON = document.getElementById("play-again");
 
       // Eventlistener for the play again button in the win modal, calls the function that resets the game
-      playAgainButton.addEventListener("click", function () {
+      PLAY_AGAIN_BUTTON.addEventListener("click", function () {
         resetGame();
       });
     }
   }
 
   // Eventlistener for when the reset button is pressed, calls the function to reset the game
-  const resetButton = document.getElementById("restart-button");
-  resetButton.addEventListener("click", () => {
+  const RESET_BUTTON = document.getElementById("restart-button");
+  RESET_BUTTON.addEventListener("click", () => {
     resetGame();
   });
 
@@ -133,8 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lockBoard = true;
 
     // Reset cards
-    const cards = document.querySelectorAll(".flip-card");
-    cards.forEach((card) => (card.dataset.flipped = false));
+    CARDS.forEach((card) => (card.dataset.flipped = false));
 
     // Reset game variables
     matchedPairs = [];
@@ -147,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Adds the disabled state to the reset button
     // Credit Stackoverflow(2), how to add disabled to the reset button.
-    resetButton.disabled = true;
+    RESET_BUTTON.disabled = true;
 
     changeRestartButtonState();
 
@@ -164,56 +160,54 @@ document.addEventListener("DOMContentLoaded", function () {
   function changeRestartButtonState() {
     //Removes the buttons disabled state when first score is counted
     if (scoreCount > 0) {
-      resetButton.removeAttribute("disabled");
-      resetButton.classList.remove("disabled-button");
-      resetButton.classList.add("button-main");
+      RESET_BUTTON.removeAttribute("disabled");
+      RESET_BUTTON.classList.remove("disabled-button");
+      RESET_BUTTON.classList.add("button-main");
     } else {
-      resetButton.classList.remove("button-main");
-      resetButton.classList.add("disabled-button");
+      RESET_BUTTON.classList.remove("button-main");
+      RESET_BUTTON.classList.add("disabled-button");
     }
   }
 
   // Walks through cards for eventlistener
   for (let index = 0; index < cards.length; index++) {
-    cards[index].addEventListener("click", clickedCard);
+    cards[index].addEventListener("click", onClickedCard);
   }
 
   function setDuckImages() {
-    // Fetch 6 images via API, see credits for proxy and duck API
     for (let i = 0; i < 6; i++) {
-      fetch(proxyUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          const dataIdentifier = i + 1;
-          const cardsToGetImage = document.querySelectorAll(
-            `[data-identifier="${dataIdentifier}"] .flip-card-back`
-          );
-          cardsToGetImage.forEach((card) => {
-            const imgElement = document.createElement("img");
-            imgElement.setAttribute("src", data.url);
-            imgElement.setAttribute("alt", "an image of a duck");
-            imgElement.classList.add("duck-image");
-            card.replaceChildren(imgElement);
-          });
-        })
-        .catch((error) => console.error("Error:", error));
+      const DATA_IDENTIFIER = i + 1;
+      const CARDS_TO_GET_IMAGE = document.querySelectorAll(
+        `[data-identifier="${DATA_IDENTIFIER}"] .flip-card-back`
+      );
+      CARDS_TO_GET_IMAGE.forEach((card) => {
+        const IMG_ELEMENT = document.createElement("img");
+        IMG_ELEMENT.setAttribute(
+          "src",
+          `./assets/img/ducks_img/duck_${DATA_IDENTIFIER}.png`
+        );
+        IMG_ELEMENT.setAttribute("alt", "an image of a duck");
+        IMG_ELEMENT.classList.add("duck-image");
+        card.replaceChildren(IMG_ELEMENT);
+      });
     }
   }
 
   function shuffleCards() {
-    const positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const POSITIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
     // The Fisher Yates Algorithm to shuffle cards from w3schools
-    for (let i = positions.length - 1; i > 0; i--) {
+    for (let i = POSITIONS.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
-      let k = positions[i];
-      positions[i] = positions[j];
-      positions[j] = k;
+      let k = POSITIONS[i];
+      POSITIONS[i] = POSITIONS[j];
+      POSITIONS[j] = k;
     }
 
     // Base code from marina-ferreira.github.io, see credits
+    // Sets the cards position using flex order
     cards.forEach((card, index) => {
-      card.style.order = positions[index];
+      card.style.order = POSITIONS[index];
     });
   }
 });
