@@ -281,13 +281,13 @@ This is something that could lead to problems with older versions of JavaScript 
 
 #### Bugs fixed
 
-**Bug 1: Pushed cards**
+**Pushed cards**
 
 When I added the cards, they were pushed outside the intended container. This was due to Bootstraps standard padding. To solve this, I put padding: 0; to the classes flip-card and flip-card-inner.
 
 ![An image of the bug with the Bootstrap cards](./docs/screenshots/bugs/cards_outside_box.png)
 
-**Bug 2: Cards flipping back**
+**Cards flipping back**
 
 Clicking a card that has already been identified as a matching pair makes the first card turn.
 
@@ -305,31 +305,15 @@ I stored the matching pairs in an array and in the if statement, in the image be
 
 ![The checks if the card is matched](./docs/screenshots/bugs/bug_cardOne_syntax_solution_function.png)
 
-**Bug 4: Freeze board while cards turn back**
+**Freeze board while cards turn back**
 
 When the user picks two cards they could click more images to turn and that would break the game. To solve this I found a solution on [Stackoverflow(1)](#credits) which utilizes the lockboard variable and setting it to true or false.
 
-**Bug 5: Bootstrap modal not showing**
+**Bootstrap modal not showing**
 
 When the user has matched all pairs, I wanted a modal to appear congratulating them for the win. I didn't get it to work but later found the solution in Bootstrap docs. The code solution can be seen in the image below:
 
 ![The code to show the Bootstrap modal](./docs/screenshots/bugs/bug_modal_not_showing.png)
-
-**Bug 6: Cors policy**
-
-When trying to GET the images from the API Random-d.uk I got the following error message:
-
-![An image of the error message for the CORS policy](./docs/screenshots/bugs/bug_cors_policy.png)
-
-I initially tried using mode: "no-cors" to resolve the issue, but it didn't work as expected. After researching alot online, I turned to ChatGPT. It explained that the error was due to the target website's Cross-Origin Resource Sharing (CORS) policy, which blocks requests from my origin. To resolve this, I used a proxy service (CorsProxy.io) that adds the necessary headers to the response which fixed the issue.
-
-#### Known bugs
-
-**Bug 7: Double images**
-
-When testing the game to see if everything worked, I stumbled upon a bug where I got the same image two times. It's very unlikely since there are 347 images/gifs available.
-
-![Same image two times](./docs/screenshots/bugs/bug_same_image.png)
 
 ### Browser testing
 
